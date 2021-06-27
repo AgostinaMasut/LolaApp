@@ -14,7 +14,7 @@ using System.Reflection;
 
 namespace LolaApp.DataAccess.Concrete
 {
-    public abstract class RepositoryBase : IRepositoryBase<T> where T : EntityBase
+    public abstract class RepositoryBase<T> : IRepositoryBase<T> where T : EntityBase
     { 
     private readonly DbSet<T> _entities;
     protected readonly DbContext _repositoryContext;
