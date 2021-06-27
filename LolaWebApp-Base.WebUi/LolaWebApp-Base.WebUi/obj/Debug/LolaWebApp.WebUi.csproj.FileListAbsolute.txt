@@ -1,0 +1,2 @@
+C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaWebApp-Base.WebUi\obj\Debug\LolaWebApp.WebUi.csproj.AssemblyReference.cache
+C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaWebApp-Base.WebUi\obj\Debug\LolaWebApp.WebUi.csproj.CoreCompileInputs.cache
