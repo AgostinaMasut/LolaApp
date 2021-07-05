@@ -1,7 +1,5 @@
 C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.AssemblyReference.cache
 C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.AssemblyReference.cache
-C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\LolaApp.DataAccess.dll.config
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\LolaApp.DataAccess.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\LolaApp.DataAccess.pdb
@@ -25,6 +23,8 @@ C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataA
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\NPOI.xml
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\NPOI.OOXML.xml
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\bin\Debug\NPOI.OpenXml4Net.xml
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.CopyComplete
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.pdb

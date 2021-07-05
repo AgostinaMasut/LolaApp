@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LolaWebApp.WebUi", "LolaWebApp-Base.WebUi\LolaWebApp.WebUi.csproj", "{FC287577-000B-4AE1-8C19-6E6CF8795199}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LolaWebApp_Base.WebUi", "LolaWebApp-Base.WebUi\LolaWebApp_Base.WebUi.csproj", "{FC287577-000B-4AE1-8C19-6E6CF8795199}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LolaApp.DataAccess", "LolaApp.DataAccess\LolaApp.DataAccess.csproj", "{E54CE8A4-C317-4FBE-BF6A-AFDB848C8B4A}"
 EndProject

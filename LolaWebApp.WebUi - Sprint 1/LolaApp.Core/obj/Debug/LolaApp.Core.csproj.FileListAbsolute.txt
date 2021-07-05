@@ -5,6 +5,7 @@ C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaAp
 C:\Users\Agostina\source\repos\ProyectoFinalDeCampo\LolaWebApp-Base.WebUi\LolaApp.Core\obj\Debug\LolaApp.Core.pdb
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.pdb
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csproj.AssemblyReference.cache
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csproj.CoreCompileInputs.cache
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.pdb

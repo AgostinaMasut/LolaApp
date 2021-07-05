@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Core.Lifetime;
 using Autofac.Integration.Mvc;
+using LolaWebApp_Base.WebUi;
 using System;
 using System.Collections.Generic;
 using System.Linq;

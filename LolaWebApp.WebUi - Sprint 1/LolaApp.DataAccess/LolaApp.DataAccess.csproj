@@ -71,11 +71,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IRepositoryBase.cs" />
+    <Compile Include="Abstractions\Repositories\IBranchRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IProfessionalTimelineRepository.cs" />
+    <Compile Include="Abstractions\Repositories\ISexRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IUserRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IUserTypeRepository.cs" />
     <Compile Include="Concrete\RepositoryBase.cs" />
     <Compile Include="LolaAppContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Abstractions\Repositories\IExampleRepository.cs" />
+    <Compile Include="Repositories\BranchRepository.cs" />
     <Compile Include="Repositories\ExampleRepository.cs" />
+    <Compile Include="Repositories\ProfessionalTimelineRepository.cs" />
+    <Compile Include="Repositories\SexRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\UserTypeRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
