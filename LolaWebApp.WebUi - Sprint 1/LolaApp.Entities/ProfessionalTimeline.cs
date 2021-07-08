@@ -14,10 +14,10 @@ namespace LolaApp.Entities
         public string Dia { get; set; }
         public DateTime Ingreso { get; set; }
         public DateTime Salida { get; set; }
-        public int IdUser { get; set; }
-        [ForeignKey("IdUser")]
+        public int? IdUser { get; set; }
+        //[ForeignKey("IdUser")]
         public virtual User User { get; set; }
-        public int IdBranch { get; set; }
+        public int? IdBranch { get; set; }
         [ForeignKey("IdBranch")]
         public virtual Branch Branch { get; set; } 
 

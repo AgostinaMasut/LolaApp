@@ -13,8 +13,15 @@ namespace LolaApp.DataAccess
         protected override void OnModelCreating(DbModelBuilder dbModelBuilder)
         {
             dbModelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            dbModelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
         }
 
         public DbSet<Example> Example { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Branch> Branch { get; set; }
+        public DbSet<ProfessionalTimeline> ProfessionalTimeline { get; set; }
+        public DbSet<Sex> Sex { get; set; }
+        public DbSet<UserType> UserType { get; set; }
+
     }
 }

@@ -31,9 +31,9 @@ namespace LolaApp.Entities
         public int IdSex { get; set; }
         [ForeignKey("IdSex")]
         public virtual Sex Sex { get; set; }
-        public int IdBranch { get; set; }
-        [ForeignKey("IdBranch")]
-        public virtual Branch Branch { get; set; }
+       // public int IdBranch { get; set; }
+        //[ForeignKey("IdBranch")]
+        //public virtual Branch Branch { get; set; }
 
     }
 }

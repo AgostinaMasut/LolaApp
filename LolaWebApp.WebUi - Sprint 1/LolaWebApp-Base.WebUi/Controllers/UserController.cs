@@ -13,16 +13,32 @@ namespace LolaWebApp_Base.WebUi.Controllers
     public class UserController : Controller
     {
         private readonly IUserRepository _userRepository;
+        private readonly IUserTypeRepository _userTypeRepository;
+        private readonly ISexRepository _sexRepository;
 
-        public UserController()
+        public UserController(IUserRepository userRepository,
+            IUserTypeRepository userTypeRepository,
+            ISexRepository sexRepository)
         {
-            _userRepository = new UserRepository(new LolaAppContext());
+            _userRepository = userRepository;
+            _userTypeRepository = userTypeRepository;
+            _sexRepository = sexRepository;
+            //_userRepository = new UserRepository(new LolaAppContext());
         }
 
         // GET: User
         public ActionResult Index()
         {
-            return View();
+            var entityList = _userRepository.FindAll();
+            List<UserViewModel> model = new List<UserViewModel>();
+            foreach (var entity in entityList)
+            {
+                var vm = new UserViewModel();
+                vm.Apellido = entity.Apellido;
+                //todo: mapear el resto de los campos
+                model.Add(vm);
+            }
+            return View(model);
         }
 
         // GET: User/Details/5
@@ -34,7 +50,10 @@ namespace LolaWebApp_Base.WebUi.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
-            return View();
+            var model = new UserViewModel();
+            model.TipoUsuario = GetTipoUsario();
+            model.Sexo = GetTipoSexo();
+            return View(model);
         }
 
         // POST: User/Create
@@ -109,5 +128,18 @@ namespace LolaWebApp_Base.WebUi.Controllers
                 return View();
             }
         }
+
+        private SelectList GetTipoUsario() {
+            var listaTipos = _userTypeRepository.FindAll();
+            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            return selectlst;
+        }
+        private SelectList GetTipoSexo()
+        {
+            var listaTipos = _sexRepository.FindAll();
+            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            return selectlst;
+        }
+
     }
 }

@@ -1,3 +1,4 @@
+using LolaApp.WebUI.App_Start;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace LolaWebApp_Base.WebUi
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            IoC.RegisterDependencies();
         }
     }
 }

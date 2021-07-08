@@ -1,9 +1,12 @@
 ﻿using Autofac;
 using Autofac.Core.Lifetime;
 using Autofac.Integration.Mvc;
+using LolaApp.DataAccess;
+using LolaApp.DataAccess.Repositories;
 using LolaWebApp_Base.WebUi;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -13,18 +16,19 @@ namespace LolaApp.WebUI.App_Start
 {
     public static class IoC
     {
-        public static void RegisterDependencies() {
+        public static void RegisterDependencies()
+        {
             var builder = new ContainerBuilder();
             var asm = Assembly.GetExecutingAssembly();
             var requestTag = MatchingScopeLifetimeTags.RequestLifetimeScopeTag;
-            
+
             // Register your MVC controllers.
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
             // OPTIONAL: Register model binders that require DI.
             builder.RegisterModelBinders(asm);
             builder.RegisterModelBinderProvider();
-            
+
 
             // OPTIONAL: Register web abstractions like HttpContextBase.
             builder.RegisterModule<AutofacWebTypesModule>();
@@ -38,10 +42,11 @@ namespace LolaApp.WebUI.App_Start
             //builder.RegisterAssemblyTypes(asm)
             //       .Where(t => t.Name.EndsWith("Repository"))
             //       .AsImplementedInterfaces();
-
-            //var asmSrvc = Assembly.GetAssembly(typeof(LolaApp.DataAccess));
-            builder.RegisterAssemblyTypes(asm)
+            //builder.RegisterType<IBranchRepository>().As<DbContext>();
+            var asmSrvc = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.GetName().Name == "LolaApp.DataAccess");
+            builder.RegisterAssemblyTypes(asmSrvc.ToArray())
                 .Where(t => t.Name.EndsWith("Repository"))
+                .WithParameter("repositoryContext", new LolaAppContext())//new DbContext(System.Configuration.ConfigurationManager.ConnectionStrings["CS"].ConnectionString))
                 .AsImplementedInterfaces().InstancePerMatchingLifetimeScope(requestTag);
 
 

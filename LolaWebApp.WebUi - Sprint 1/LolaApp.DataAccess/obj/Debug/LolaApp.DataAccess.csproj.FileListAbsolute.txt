@@ -28,3 +28,5 @@ C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataA
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.CopyComplete
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.pdb
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration.resources
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.csproj.GenerateResource.cache
