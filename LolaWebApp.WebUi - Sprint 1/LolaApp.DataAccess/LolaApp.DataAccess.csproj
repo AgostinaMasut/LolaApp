@@ -72,6 +72,7 @@
     <Compile Include="Abstractions\IRepositoryBase.cs" />
     <Compile Include="Abstractions\Repositories\IBranchRepository.cs" />
     <Compile Include="Abstractions\Repositories\IProfessionalTimelineRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IProtocolRepository.cs" />
     <Compile Include="Abstractions\Repositories\ISexRepository.cs" />
     <Compile Include="Abstractions\Repositories\IUserRepository.cs" />
     <Compile Include="Abstractions\Repositories\IUserTypeRepository.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Repositories\BranchRepository.cs" />
     <Compile Include="Repositories\ExampleRepository.cs" />
     <Compile Include="Repositories\ProfessionalTimelineRepository.cs" />
+    <Compile Include="Repositories\ProtocolRepository.cs" />
     <Compile Include="Repositories\SexRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\UserTypeRepository.cs" />
