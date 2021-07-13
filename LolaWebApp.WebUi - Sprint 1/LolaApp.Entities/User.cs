@@ -11,20 +11,20 @@ namespace LolaApp.Entities
     public class User : EntityBase
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public string Apellido { get; set; }
+        public string Name { get; set; }
+        public string LastName { get; set; }
         public int DNI { get; set; }
         public int CuitCuil { get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Calle { get; set; }
-        public int NumeroCalle { get; set; }
-        public string Barrio { get; set; }
-        public int CP { get; set; }
-        public string Localidad { get; set; }
-        public int Celular { get; set; }
+        public DateTime Birthday { get; set; }
+        public string Street { get; set; }
+        public int StreetNumber { get; set; }
+        public string Neighbourhood { get; set; }
+        public int ZipCode { get; set; }
+        public string City { get; set; }
+        public int Mobile { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public byte Habilitado { get; set; }
+        public byte Enable { get; set; }
         public int IdUserType { get; set; }
         [ForeignKey("IdUserType")]
         public virtual UserType UserType { get; set; }

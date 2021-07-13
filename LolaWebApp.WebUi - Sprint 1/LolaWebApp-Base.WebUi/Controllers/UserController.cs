@@ -34,7 +34,7 @@ namespace LolaWebApp_Base.WebUi.Controllers
             foreach (var entity in entityList)
             {
                 var vm = new UserViewModel();
-                vm.Apellido = entity.Apellido;
+                vm.LastName = entity.LastName;
                 //todo: mapear el resto de los campos
                 model.Add(vm);
             }
@@ -51,8 +51,8 @@ namespace LolaWebApp_Base.WebUi.Controllers
         public ActionResult Create()
         {
             var model = new UserViewModel();
-            model.TipoUsuario = GetTipoUsario();
-            model.Sexo = GetTipoSexo();
+            model.UserType = GetUserType();
+            model.Sex = GetSex();
             return View(model);
         }
 
@@ -68,12 +68,12 @@ namespace LolaWebApp_Base.WebUi.Controllers
                 }
                 var entity = new User();
                 //entity.Denominacion = model.Denominacion;
-                entity.Nombre = user.Nombre;
-                entity.Apellido = user.Apellido;
+                entity.Name = user.Name;
+                entity.LastName = user.LastName;
                 entity.DNI = user.DNI;
                 entity.CuitCuil = user.CuitCuil;
-                entity.FechaNacimiento = user.FechaNacimiento;
-                entity.Calle = user.Calle;
+                entity.Birthday = user.Birthday;
+                entity.Street = user.Street;
                 //entity.IdUserType = user.TipoUsuario;
                 _userRepository.Create(entity);
                 return RedirectToAction("Index");
@@ -129,15 +129,15 @@ namespace LolaWebApp_Base.WebUi.Controllers
             }
         }
 
-        private SelectList GetTipoUsario() {
+        private SelectList GetUserType() {
             var listaTipos = _userTypeRepository.FindAll();
-            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            var selectlst = new SelectList(listaTipos, "Id", "Descritcion");
             return selectlst;
         }
-        private SelectList GetTipoSexo()
+        private SelectList GetSex()
         {
             var listaTipos = _sexRepository.FindAll();
-            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            var selectlst = new SelectList(listaTipos, "Id", "Description");
             return selectlst;
         }
 
