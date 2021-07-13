@@ -90,6 +90,14 @@
     <Compile Include="Migrations\202107122358026_InitialMigration2.Designer.cs">
       <DependentUpon>202107122358026_InitialMigration2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107131534558_InitialMigration3.cs" />
+    <Compile Include="Migrations\202107131534558_InitialMigration3.Designer.cs">
+      <DependentUpon>202107131534558_InitialMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107131625190_InitialMigration4.cs" />
+    <Compile Include="Migrations\202107131625190_InitialMigration4.Designer.cs">
+      <DependentUpon>202107131625190_InitialMigration4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Abstractions\Repositories\IExampleRepository.cs" />
@@ -124,6 +132,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107122358026_InitialMigration2.resx">
       <DependentUpon>202107122358026_InitialMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107131534558_InitialMigration3.resx">
+      <DependentUpon>202107131534558_InitialMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107131625190_InitialMigration4.resx">
+      <DependentUpon>202107131625190_InitialMigration4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

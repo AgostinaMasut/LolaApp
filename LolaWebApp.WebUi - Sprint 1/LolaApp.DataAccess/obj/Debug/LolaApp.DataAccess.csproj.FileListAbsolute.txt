@@ -62,3 +62,7 @@ G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.Data
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.pdb
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration1.resources
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration2.resources
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration1.resources
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration2.resources
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration3.resources
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.DataAccess\obj\Debug\LolaApp.DataAccess.Migrations.InitialMigration4.resources

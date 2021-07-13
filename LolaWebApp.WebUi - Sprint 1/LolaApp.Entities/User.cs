@@ -14,7 +14,7 @@ namespace LolaApp.Entities
         public string Name { get; set; }
         public string LastName { get; set; }
         public int DNI { get; set; }
-        public int CuitCuil { get; set; }
+        public string CuitCuil { get; set; }
         public DateTime Birthday { get; set; }
         public string Street { get; set; }
         public int StreetNumber { get; set; }

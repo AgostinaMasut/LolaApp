@@ -246,3 +246,9 @@ G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\obj\Debug\LolaWebAp
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\obj\Debug\LolaWebApp_Base.WebUi.csproj.CopyComplete
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\obj\Debug\LolaWebApp-Base.WebUi.dll
 G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\obj\Debug\LolaWebApp-Base.WebUi.pdb
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\AutoMapper.dll
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\AutoMapper.EF6.dll
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\DelegateDecompiler.dll
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\DelegateDecompiler.EntityFramework.dll
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\Mono.Reflection.dll
+C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaWebApp-Base.WebUi\bin\AutoMapper.xml

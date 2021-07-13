@@ -22,6 +22,7 @@ namespace LolaApp.DataAccess
         public DbSet<ProfessionalTimeline> ProfessionalTimeline { get; set; }
         public DbSet<Sex> Sex { get; set; }
         public DbSet<UserType> UserType { get; set; }
+        public DbSet<Protocol> Protocol { get; set; }
 
     }
 }

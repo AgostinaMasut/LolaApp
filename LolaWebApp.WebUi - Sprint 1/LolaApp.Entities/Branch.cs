@@ -12,7 +12,7 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public double PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         public string Street { get; set; }
         public int StreetNumber { get; set; }
         public string Neighbourhood { get; set; }
