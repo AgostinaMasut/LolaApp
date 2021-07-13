@@ -16,3 +16,12 @@ C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entit
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csproj.CopyComplete
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.pdb
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\bin\Debug\LolaApp.Entities.dll
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\bin\Debug\LolaApp.Entities.pdb
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\bin\Debug\LolaApp.Core.dll
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\bin\Debug\LolaApp.Core.pdb
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csprojAssemblyReference.cache
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csproj.CoreCompileInputs.cache
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csproj.CopyComplete
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.dll
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.pdb

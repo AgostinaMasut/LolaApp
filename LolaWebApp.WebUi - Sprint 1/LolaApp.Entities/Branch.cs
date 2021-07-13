@@ -11,13 +11,13 @@ namespace LolaApp.Entities
     public class Branch : EntityBase
     {
         public int Id { get; set; }
-        public string Nombre { get; set; }
-        public int Telefono { get; set; }
-        public string Calle { get; set; }
-        public int NumeroCalle { get; set; }
-        public string Barrio { get; set; }
-        public int CP { get; set; }
-        public string Localidad { get; set; }
+        public string Name { get; set; }
+        public double PhoneNumber { get; set; }
+        public string Street { get; set; }
+        public int StreetNumber { get; set; }
+        public string Neighbourhood { get; set; }
+        public int ZipCode { get; set; }
+        public string City { get; set; }
 
 
     }
