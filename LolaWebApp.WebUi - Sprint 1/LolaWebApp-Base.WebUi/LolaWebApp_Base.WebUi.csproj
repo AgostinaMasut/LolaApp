@@ -162,6 +162,8 @@
     <Compile Include="Models\BranchViewModel.cs" />
     <Compile Include="Models\ModelBase.cs" />
     <Compile Include="Models\ProfessionalTimelineViewModel.cs" />
+    <Compile Include="Models\TreatmentViewModel.cs" />
+    <Compile Include="Models\TurnViewModel.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

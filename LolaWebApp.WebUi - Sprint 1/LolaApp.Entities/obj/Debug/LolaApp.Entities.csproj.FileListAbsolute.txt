@@ -16,3 +16,7 @@ C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entit
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csproj.CopyComplete
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.pdb
+C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csprojAssemblyReference.cache
+C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.dll
+C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Entities\obj\Debug\LolaApp.Entities.pdb
