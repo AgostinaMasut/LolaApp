@@ -42,12 +42,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AestheticPathologies.cs" />
+    <Compile Include="Assistance.cs" />
+    <Compile Include="AssistanceType.cs" />
+    <Compile Include="AvailabilityHistory.cs" />
+    <Compile Include="BackgroundType.cs" />
+    <Compile Include="BodyArea.cs" />
+    <Compile Include="BodyMeasurements.cs" />
+    <Compile Include="BodyMeasurementsHistory.cs" />
     <Compile Include="Branch.cs" />
+    <Compile Include="CommentCrm.cs" />
+    <Compile Include="Consent.cs" />
+    <Compile Include="ConsultantType.cs" />
+    <Compile Include="Crm.cs" />
     <Compile Include="Example.cs" />
+    <Compile Include="Frequency.cs" />
+    <Compile Include="Machine.cs" />
+    <Compile Include="MachineAvailability.cs" />
+    <Compile Include="MachineType.cs" />
+    <Compile Include="MeasurementsBodyType.cs" />
+    <Compile Include="MediaType.cs" />
+    <Compile Include="Patient.cs" />
+    <Compile Include="PreviousAntecedents.cs" />
+    <Compile Include="PriceList.cs" />
     <Compile Include="ProfessionalTimeline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Protocol.cs" />
+    <Compile Include="QueryType.cs" />
+    <Compile Include="Risks.cs" />
     <Compile Include="Sex.cs" />
+    <Compile Include="Stretcher.cs" />
+    <Compile Include="StretcherAvailability.cs" />
+    <Compile Include="SurgeriesType.cs" />
+    <Compile Include="SurgeryProtocol.cs" />
+    <Compile Include="Treatment.cs" />
+    <Compile Include="Turn.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserType.cs" />
   </ItemGroup>

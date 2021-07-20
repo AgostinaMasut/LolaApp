@@ -55,8 +55,8 @@ namespace LolaWebApp_Base.WebUi.Controllers
         public ActionResult Create()
         {
             var model = new UserViewModel();
-            //model.UserType = GetUserType();
-            //model.Sex = GetSex();
+            model.UserType = GetUserType();
+            model.Sex = GetSex();
             return View(model);
         }
 
@@ -147,7 +147,7 @@ namespace LolaWebApp_Base.WebUi.Controllers
             var selectlst = new SelectList(listaTipos, "Id", "Description");
             return selectlst;
         }
-        //private SelectList GetUserTypeId()
+        //private SelectList PutUserTypeId()
         //{
         //    //var listaTipos = _userTypeRepository.FindAll();
         //    //var selectlstId = new SelectList(listaTipos, "Id", "Description");
