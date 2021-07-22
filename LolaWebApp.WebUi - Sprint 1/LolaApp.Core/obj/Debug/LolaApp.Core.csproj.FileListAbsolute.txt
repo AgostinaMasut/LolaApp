@@ -9,9 +9,18 @@ C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csproj.CoreCompileInputs.cache
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.dll
 C:\Users\Agostina\source\repos\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.pdb
+<<<<<<< HEAD
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.dll
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.pdb
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csprojAssemblyReference.cache
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csproj.CoreCompileInputs.cache
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.dll
 C:\Users\Luciana\Desktop\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.pdb
+=======
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.dll
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\bin\Debug\LolaApp.Core.pdb
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csprojAssemblyReference.cache
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.csproj.CoreCompileInputs.cache
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.dll
+G:\LolaApp\LolaWebApp.WebUi - Sprint 1\LolaApp.Core\obj\Debug\LolaApp.Core.pdb
+>>>>>>> 2cc0010075167e23c0d992ba223f8a94199cf1ce

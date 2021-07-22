@@ -12,6 +12,13 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public int IdTurn { get; set; }
-        public int IdTypeOfAssistance { get; set; }
+        [ForeignKey("IdTurn")]
+        public virtual Turn Turn { get; set; }
+
+        public int IdAssistanceType { get; set; }
+        [ForeignKey("IdAssistanceType")]
+        public virtual AssistanceType AssistanceType { get; set; }
+
+
     }
 }

@@ -34,7 +34,11 @@ namespace LolaWebApp_Base.WebUi.Controllers
             foreach (var entity in entityList)
             {
                 var vm = new UserViewModel();
-                vm.Apellido = entity.Apellido;
+                vm.Name = entity.Name;
+                vm.LastName = entity.LastName;
+                vm.Email = entity.Email;
+                //Resolver tipo de usuario
+                vm.Enable = entity.Enable;
                 //todo: mapear el resto de los campos
                 model.Add(vm);
             }
@@ -51,8 +55,8 @@ namespace LolaWebApp_Base.WebUi.Controllers
         public ActionResult Create()
         {
             var model = new UserViewModel();
-            model.TipoUsuario = GetTipoUsario();
-            model.Sexo = GetTipoSexo();
+            model.UserType = GetUserType();
+            model.Sex = GetSex();
             return View(model);
         }
 
@@ -67,14 +71,23 @@ namespace LolaWebApp_Base.WebUi.Controllers
                     return View(user);
                 }
                 var entity = new User();
-                //entity.Denominacion = model.Denominacion;
-                entity.Nombre = user.Nombre;
-                entity.Apellido = user.Apellido;
+                //Crear mappeo
+                entity.Name = user.Name;
+                entity.LastName = user.LastName;
                 entity.DNI = user.DNI;
                 entity.CuitCuil = user.CuitCuil;
-                entity.FechaNacimiento = user.FechaNacimiento;
-                entity.Calle = user.Calle;
-                //entity.IdUserType = user.TipoUsuario;
+                entity.Birthday = user.Birthday;
+                entity.Street = user.Street;
+                entity.StreetNumber = user.StreetNumber;
+                entity.Neighbourhood = user.Neighbourhood;
+                entity.ZipCode = user.ZipCode;
+                entity.City = user.City;
+                entity.Mobile = user.Mobile;
+                entity.Email = user.Email;
+                entity.Password = user.Password;
+                entity.Enable = user.Enable;
+                entity.IdUserType = 1;
+                entity.IdSex = 2;
                 _userRepository.Create(entity);
                 return RedirectToAction("Index");
 
@@ -129,15 +142,21 @@ namespace LolaWebApp_Base.WebUi.Controllers
             }
         }
 
-        private SelectList GetTipoUsario() {
+        private SelectList GetUserType() {
             var listaTipos = _userTypeRepository.FindAll();
-            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            var selectlst = new SelectList(listaTipos, "Id", "Description");
             return selectlst;
         }
-        private SelectList GetTipoSexo()
+        //private SelectList PutUserTypeId()
+        //{
+        //    //var listaTipos = _userTypeRepository.FindAll();
+        //    //var selectlstId = new SelectList(listaTipos, "Id", "Description");
+        //    //return selectlstId;
+        //}
+        private SelectList GetSex()
         {
             var listaTipos = _sexRepository.FindAll();
-            var selectlst = new SelectList(listaTipos, "Id", "Descripcion");
+            var selectlst = new SelectList(listaTipos, "Id", "Description");
             return selectlst;
         }
 

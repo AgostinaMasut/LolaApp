@@ -25,15 +25,15 @@ namespace LolaApp.Entities
         public int IdMachineAvailability { get; set; }
         [ForeignKey("IdMachineAvailability")]
         public virtual MachineAvailability MachineAvailability { get; set; }
-        public int IdTypeOfQuery { get; set; }
-        [ForeignKey("IdTypeOfQuery")]
-        public virtual TypeOfQuery TypeOfQuery { get; set; }
+        public int IdQueryType { get; set; }
+        [ForeignKey("IdQueryType")]
+        public virtual QueryType QueryType { get; set; }
         public int IdBranch { get; set; }
         [ForeignKey("IdBranch")]
         public virtual Branch Branch { get; set; }
-        public int IdAvailabilityOfSurgeries { get; set; }
-        [ForeignKey("IdAvailabilityOfSurgeries")]
-        public virtual AvailabilityOfSurgeries AvailabilityOfSurgeries { get; set; }
+        public int IdSurgeriesAvailability { get; set; }
+        [ForeignKey("IdSurgeriesAvailability")]
+        public virtual SurgeriesAvailability SurgeriesAvailability { get; set; }
 
     }
 }

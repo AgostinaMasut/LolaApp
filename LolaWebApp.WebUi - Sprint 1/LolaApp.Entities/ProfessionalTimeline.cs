@@ -11,11 +11,11 @@ namespace LolaApp.Entities
     public class ProfessionalTimeline : EntityBase
     {
         public int Id { get; set; }
-        public string Dia { get; set; }
-        public DateTime Ingreso { get; set; }
-        public DateTime Salida { get; set; }
+        public string Day { get; set; }
+        public DateTime Input { get; set; }
+        public DateTime Output { get; set; }
         public int? IdUser { get; set; }
-        //[ForeignKey("IdUser")]
+        [ForeignKey("IdUser")]
         public virtual User User { get; set; }
         public int? IdBranch { get; set; }
         [ForeignKey("IdBranch")]

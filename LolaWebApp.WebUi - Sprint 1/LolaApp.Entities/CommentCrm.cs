@@ -12,6 +12,8 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public int IdCrm { get; set; }
+        [ForeignKey("IdCrm")]
+        public virtual Crm Crm { get; set; }
         public string ContactDate { get; set; }
         public string AnswerDate { get; set; }
         public string Commentary { get; set; }

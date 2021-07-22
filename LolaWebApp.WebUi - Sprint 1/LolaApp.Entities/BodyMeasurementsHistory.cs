@@ -13,7 +13,12 @@ namespace LolaApp.Entities
         public int Id { get; set; }
         public DateTime MeasurementDate { get; set; }
         public int IdPatient { get; set; }
-        public int MeasurementsBodyType { get; set; }
+        [ForeignKey("IdPatient")]
+        public virtual Patient Patient { get; set; }
+        public int IdMeasurementsBodyType { get; set; }
+        [ForeignKey("IdMeasurementsBodyType")]
+        public virtual MeasurementsBodyType MeasurementsBodyType { get; set; }
+
         public int CmGr { get; set; }
 
     }

@@ -15,7 +15,7 @@ namespace LolaApp.Entities
         //Referencia a otra entity
         //public int IdPropiedad { get; set; }
         //[ForeingKey("IdPropiedad")]
-        //public virtual NombreEntity IdPropiedad { get; set; }
+        //public virtual NombreEntity NombreEntity { get; set; }
 
     }
 }

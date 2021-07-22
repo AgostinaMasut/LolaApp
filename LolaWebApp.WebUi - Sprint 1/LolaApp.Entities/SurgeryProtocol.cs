@@ -12,7 +12,11 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public int IdPatient { get; set; }
+        [ForeignKey("IdPatient")]
+        public virtual Patient Patient { get; set; }
         public int IdTreatmentType { get; set; }
+        [ForeignKey("IdTreatmentType")]
+        public virtual TreatmentType TreatmentType { get; set; }
         public string Commentary { get; set; }
 
     }

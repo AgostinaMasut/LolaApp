@@ -12,8 +12,10 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public int IdStretcher { get; set; }
+        [ForeignKey("IdStretcher")]
+        public virtual Stretcher Stretcher { get; set; }
         public DateTime Day { get; set; }
         public DateTime Hour { get; set; }
-        public byte Ocupado { get; set; }
+        public bool Occupied { get; set; }
     }
 }

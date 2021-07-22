@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<LolaWebApp_Base.WebUi.Models.UserViewModel>
 
 @{
-    ViewBag.Title = "Usuarios";
+    ViewBag.Title = "Index";
 }
 
-<h2>Usuarios</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,46 +12,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nombre)
+            @Html.DisplayNameFor(model => model.Name)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Apellido)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DNI)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CuitCuil)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaNacimiento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Calle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroCalle)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Barrio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CP)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Localidad)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Celular)
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Email)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            @Html.DisplayNameFor(model => model.UserType)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Habilitado)
+            @Html.DisplayNameFor(model => model.Enable)
         </th>
         <th></th>
     </tr>
@@ -59,46 +32,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Nombre)
+            @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DNI)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CuitCuil)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Calle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroCalle)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Barrio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CP)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Localidad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Celular)
+            @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
+            @Html.DisplayFor(modelItem => item.UserType)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Habilitado)
+            @Html.DisplayFor(modelItem => item.Enable)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

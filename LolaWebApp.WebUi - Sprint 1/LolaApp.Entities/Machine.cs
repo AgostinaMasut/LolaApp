@@ -12,5 +12,8 @@ namespace LolaApp.Entities
     {
         public int Id { get; set; }
         public int IdMachineType { get; set; }
+        [ForeignKey("IdMachineType")]
+        public virtual MachineType MachineType { get; set; }
+
     }
 }

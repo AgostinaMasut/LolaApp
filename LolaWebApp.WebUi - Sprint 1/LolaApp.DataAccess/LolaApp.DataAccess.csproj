@@ -79,10 +79,12 @@
     <Compile Include="Abstractions\Repositories\IBodyMeasurementsHistoryRepository.cs" />
     <Compile Include="Abstractions\Repositories\IBodyMeasurementsRepository.cs" />
     <Compile Include="Abstractions\Repositories\IBranchRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IClinicHistoryRepository.cs" />
     <Compile Include="Abstractions\Repositories\ICommentCrmRepository.cs" />
     <Compile Include="Abstractions\Repositories\IConsentRepository.cs" />
     <Compile Include="Abstractions\Repositories\IConsultantTypeRepository.cs" />
     <Compile Include="Abstractions\Repositories\ICrmRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IFollowupTreatmentRepository.cs" />
     <Compile Include="Abstractions\Repositories\IFrequencyRepository.cs" />
     <Compile Include="Abstractions\Repositories\IMachineAvailabilityRepository.cs" />
     <Compile Include="Abstractions\Repositories\IMachineRepository.cs" />
@@ -96,20 +98,49 @@
     <Compile Include="Abstractions\Repositories\IProtocolRepository.cs" />
     <Compile Include="Abstractions\Repositories\IQueryTypeRepository.cs" />
     <Compile Include="Abstractions\Repositories\IRisksRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IRiskSurgeryRepository.cs" />
     <Compile Include="Abstractions\Repositories\ISexRepository.cs" />
     <Compile Include="Abstractions\Repositories\IStretcherAvailabilityRepository.cs" />
     <Compile Include="Abstractions\Repositories\IStretcherRepository.cs" />
+    <Compile Include="Abstractions\Repositories\ISurgeriesAvailabilityRepository.cs" />
+    <Compile Include="Abstractions\Repositories\ISurgeriesAvailabilityRepository1.cs" />
     <Compile Include="Abstractions\Repositories\ISurgeriesTypeRepository.cs" />
+    <Compile Include="Abstractions\Repositories\ISurgeryConsentRepository.cs" />
     <Compile Include="Abstractions\Repositories\ISurgeryProtocolRepository.cs" />
     <Compile Include="Abstractions\Repositories\ITreatmentRepository.cs" />
     <Compile Include="Abstractions\Repositories\ITurnRepository.cs" />
     <Compile Include="Abstractions\Repositories\IUserRepository.cs" />
     <Compile Include="Abstractions\Repositories\IUserTypeRepository.cs" />
+    <Compile Include="Abstractions\Repositories\TreatmentTypeRepository.cs" />
     <Compile Include="Concrete\RepositoryBase.cs" />
     <Compile Include="LolaAppContext.cs" />
     <Compile Include="Migrations\202107070049288_InitialMigration.cs" />
     <Compile Include="Migrations\202107070049288_InitialMigration.Designer.cs">
       <DependentUpon>202107070049288_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107122342177_InitialMigration1.cs" />
+    <Compile Include="Migrations\202107122342177_InitialMigration1.Designer.cs">
+      <DependentUpon>202107122342177_InitialMigration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107122358026_InitialMigration2.cs" />
+    <Compile Include="Migrations\202107122358026_InitialMigration2.Designer.cs">
+      <DependentUpon>202107122358026_InitialMigration2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107131534558_InitialMigration3.cs" />
+    <Compile Include="Migrations\202107131534558_InitialMigration3.Designer.cs">
+      <DependentUpon>202107131534558_InitialMigration3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107131625190_InitialMigration4.cs" />
+    <Compile Include="Migrations\202107131625190_InitialMigration4.Designer.cs">
+      <DependentUpon>202107131625190_InitialMigration4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107132212492_InitialMigration5.cs" />
+    <Compile Include="Migrations\202107132212492_InitialMigration5.Designer.cs">
+      <DependentUpon>202107132212492_InitialMigration5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107132219234_InitialMigration6.cs" />
+    <Compile Include="Migrations\202107132219234_InitialMigration6.Designer.cs">
+      <DependentUpon>202107132219234_InitialMigration6.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -123,11 +154,13 @@
     <Compile Include="Repositories\BodyMeasurementsHistoryRepository.cs" />
     <Compile Include="Repositories\BodyMeasurementsRepository.cs" />
     <Compile Include="Repositories\BranchRepository.cs" />
+    <Compile Include="Repositories\ClinicHistoryRepository.cs" />
     <Compile Include="Repositories\CommentCrmRepository.cs" />
     <Compile Include="Repositories\ConsentRepository.cs" />
     <Compile Include="Repositories\ConsultantTypeRepository.cs" />
     <Compile Include="Repositories\CrmRepository.cs" />
     <Compile Include="Repositories\ExampleRepository.cs" />
+    <Compile Include="Repositories\FollowupTreatmentRepository.cs" />
     <Compile Include="Repositories\FrequencyRepository.cs" />
     <Compile Include="Repositories\MachineAvailabilityRepository.cs" />
     <Compile Include="Repositories\MachineRepository.cs" />
@@ -141,12 +174,16 @@
     <Compile Include="Repositories\ProtocolRepository.cs" />
     <Compile Include="Repositories\QueryTypeRepository.cs" />
     <Compile Include="Repositories\RisksRepository.cs" />
+    <Compile Include="Repositories\RiskSurgeryRepository.cs" />
     <Compile Include="Repositories\SexRepository.cs" />
     <Compile Include="Repositories\StretcherAvailabilityRepository.cs" />
     <Compile Include="Repositories\StretcherRepository.cs" />
+    <Compile Include="Repositories\SurgeriesAvailabilityRepository.cs" />
     <Compile Include="Repositories\SurgeriesTypeRepository.cs" />
+    <Compile Include="Repositories\SurgeryConsentRepository.cs" />
     <Compile Include="Repositories\SurgeryProtocolRepository.cs" />
     <Compile Include="Repositories\TreatmentRepository.cs" />
+    <Compile Include="Repositories\TreatmentTypeRepository.cs" />
     <Compile Include="Repositories\TurnRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\UserTypeRepository.cs" />
@@ -168,6 +205,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202107070049288_InitialMigration.resx">
       <DependentUpon>202107070049288_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107122342177_InitialMigration1.resx">
+      <DependentUpon>202107122342177_InitialMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107122358026_InitialMigration2.resx">
+      <DependentUpon>202107122358026_InitialMigration2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107131534558_InitialMigration3.resx">
+      <DependentUpon>202107131534558_InitialMigration3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107131625190_InitialMigration4.resx">
+      <DependentUpon>202107131625190_InitialMigration4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107132212492_InitialMigration5.resx">
+      <DependentUpon>202107132212492_InitialMigration5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107132219234_InitialMigration6.resx">
+      <DependentUpon>202107132219234_InitialMigration6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
