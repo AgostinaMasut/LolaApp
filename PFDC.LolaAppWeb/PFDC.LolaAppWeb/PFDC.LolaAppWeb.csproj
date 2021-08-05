@@ -175,10 +175,49 @@
     <Compile Include="Migrations\202107262120083_up timeline input ouput.Designer.cs">
       <DependentUpon>202107262120083_up timeline input ouput.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108052019534_nuevadb.cs" />
+    <Compile Include="Migrations\202108052019534_nuevadb.Designer.cs">
+      <DependentUpon>202108052019534_nuevadb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AestheticPathologies.cs" />
+    <Compile Include="Models\Assistance.cs" />
+    <Compile Include="Models\AssistanceType.cs" />
+    <Compile Include="Models\AvailabilityHistory.cs" />
+    <Compile Include="Models\BackgroundType.cs" />
+    <Compile Include="Models\BodyArea.cs" />
+    <Compile Include="Models\BodyMeasurementsHistory.cs" />
     <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\ClinicHistory.cs" />
+    <Compile Include="Models\CommentCrm.cs" />
+    <Compile Include="Models\Consent.cs" />
+    <Compile Include="Models\ConsultantType.cs" />
+    <Compile Include="Models\Crm.cs" />
+    <Compile Include="Models\FollowupTreatment.cs" />
+    <Compile Include="Models\Frequency.cs" />
+    <Compile Include="Models\Machine.cs" />
+    <Compile Include="Models\MachineAvailability.cs" />
+    <Compile Include="Models\MachineType.cs" />
+    <Compile Include="Models\MeasurementsBodyType.cs" />
+    <Compile Include="Models\MediaType.cs" />
+    <Compile Include="Models\Patient.cs" />
+    <Compile Include="Models\PreviousAntecedents.cs" />
+    <Compile Include="Models\PriceList.cs" />
     <Compile Include="Models\ProfessionalTimeline.cs" />
+    <Compile Include="Models\Protocol.cs" />
+    <Compile Include="Models\QueryType.cs" />
+    <Compile Include="Models\Risks.cs" />
+    <Compile Include="Models\RiskSurgery.cs" />
     <Compile Include="Models\Sex.cs" />
+    <Compile Include="Models\Stretcher.cs" />
+    <Compile Include="Models\StretcherAvailability.cs" />
+    <Compile Include="Models\SurgeriesAvailability.cs" />
+    <Compile Include="Models\SurgeriesType.cs" />
+    <Compile Include="Models\SurgeryConsent.cs" />
+    <Compile Include="Models\SurgeryProtocol.cs" />
+    <Compile Include="Models\Treatment.cs" />
+    <Compile Include="Models\TreatmentType.cs" />
+    <Compile Include="Models\Turn.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -287,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107262120083_up timeline input ouput.resx">
       <DependentUpon>202107262120083_up timeline input ouput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108052019534_nuevadb.resx">
+      <DependentUpon>202108052019534_nuevadb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -40,6 +40,7 @@ namespace PFDC.LolaAppWeb.Models
 
         [Required()]
         [DisplayName("N°")]
+        [RegularExpression("(^[0-9]+$)", ErrorMessage = "Solo se permiten números, sin puntos ni guiones")]
         public int StreetNumber { get; set; }
         
         [DisplayName("Barrio")]
