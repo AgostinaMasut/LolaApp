@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel;
 
 namespace PFDC.LolaAppWeb.Models
 {
@@ -12,20 +13,19 @@ namespace PFDC.LolaAppWeb.Models
         public int Id { get; set; }
         public DateTime Fecha { get; set; }
         public DateTime Hora { get; set; }
+        [DisplayName("Tratamiento")]
         public int TreatmentId { get; set; }
         public  Treatment Treatment { get; set; }
         public int ProfessionalTimelineId { get; set; }
-        public  ProfessionalTimeline ProfessionalTimeline { get; set; }
-        public int StretcherAvailabilityId { get; set; }
-        public  StretcherAvailability StretcherAvailability { get; set; }
-        public int MachineAvailabilityId { get; set; }
-        public  MachineAvailability MachineAvailability { get; set; }
+        public ProfessionalTimeline ProfessionalTimeline { get; set; }
+        [DisplayName("Tipo de consulta")]
         public int QueryTypeId { get; set; }
-        public  QueryType QueryType { get; set; }
+        public QueryType QueryType { get; set; }
+        [DisplayName("Sucursal")]
         public int BranchId { get; set; }
-        public  Branch Branch { get; set; }
-        public int SurgeriesAvailabilityId { get; set; }
-        public  SurgeriesAvailability SurgeriesAvailability { get; set; }
-
+        public Branch Branch { get; set; }
+        [DisplayName("Asistecia")]
+        public int AssistanceTypeId { get; set; }
+        public AssistanceType AssistanceType { get; set; }
     }
 }

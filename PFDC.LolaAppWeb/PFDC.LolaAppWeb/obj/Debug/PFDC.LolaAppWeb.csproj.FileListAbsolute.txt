@@ -184,7 +184,6 @@ C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.Lol
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\es\System.Web.WebPages.resources.dll
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\es\System.Web.WebPages.Razor.resources.dll
-C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csproj.AssemblyReference.cache
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.Initial.resources
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.usertypeandsex.resources
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.actalizaciónuser.resources
@@ -201,3 +200,4 @@ C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.Lol
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.dll
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.pdb
 C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.nuevadb.resources
+C:\Users\Agostina\source\repos\RepositorioTesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csproj.AssemblyReference.cache

@@ -7,14 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PFDC.LolaAppWeb.Models
 {
-    public class SurgeryProtocol 
+    public class SurgeryProtocol
     {
         public int Id { get; set; }
         public int PatientId { get; set; }
         public  Patient Patient { get; set; }
-        public int TreatmentTypeId { get; set; }
-        public  TreatmentType TreatmentType { get; set; }
+        public int StepNumber { get; set; }
         public string Commentary { get; set; }
-
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
