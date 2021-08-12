@@ -3,7 +3,7 @@ namespace PFDC.LolaAppWeb.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class CorreccionDERybasdedatos : DbMigration
+    public partial class db : DbMigration
     {
         public override void Up()
         {
@@ -99,20 +99,17 @@ namespace PFDC.LolaAppWeb.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        PatientId = c.Int(nullable: false),
-                        TurnId = c.Int(nullable: false),
                         SessionNumber = c.Int(nullable: false),
+                        PatientId = c.Int(),
                         UserId = c.Int(nullable: false),
                         Commentary = c.String(),
                         TreatmentId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Patients", t => t.PatientId, cascadeDelete: true)
+                .ForeignKey("dbo.Patients", t => t.PatientId)
                 .ForeignKey("dbo.Treatments", t => t.TreatmentId, cascadeDelete: true)
-                .ForeignKey("dbo.Turns", t => t.TurnId, cascadeDelete: true)
                 .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.PatientId)
-                .Index(t => t.TurnId)
                 .Index(t => t.UserId)
                 .Index(t => t.TreatmentId);
             
@@ -165,54 +162,14 @@ namespace PFDC.LolaAppWeb.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Turns",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Fecha = c.DateTime(nullable: false),
-                        Hora = c.DateTime(nullable: false),
-                        TreatmentId = c.Int(nullable: false),
-                        ProfessionalTimelineId = c.Int(nullable: false),
-                        QueryTypeId = c.Int(nullable: false),
-                        BranchId = c.Int(nullable: false),
-                        AssistanceTypeId = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AssistanceTypes", t => t.AssistanceTypeId, cascadeDelete: true)
-                .ForeignKey("dbo.Branches", t => t.BranchId, cascadeDelete: true)
-                .ForeignKey("dbo.ProfessionalTimelines", t => t.ProfessionalTimelineId, cascadeDelete: true)
-                .ForeignKey("dbo.QueryTypes", t => t.QueryTypeId, cascadeDelete: true)
-                .ForeignKey("dbo.Treatments", t => t.TreatmentId, cascadeDelete: true)
-                .Index(t => t.TreatmentId)
-                .Index(t => t.ProfessionalTimelineId)
-                .Index(t => t.QueryTypeId)
-                .Index(t => t.BranchId)
-                .Index(t => t.AssistanceTypeId);
-            
-            CreateTable(
-                "dbo.QueryTypes",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Description = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
                 "dbo.SurgeryProtocols",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        PatientId = c.Int(nullable: false),
                         StepNumber = c.Int(nullable: false),
                         Commentary = c.String(),
-                        UserId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Patients", t => t.PatientId, cascadeDelete: true)
-                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.PatientId)
-                .Index(t => t.UserId);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.CommentCrms",
@@ -301,10 +258,49 @@ namespace PFDC.LolaAppWeb.Migrations
                 .ForeignKey("dbo.Treatments", t => t.TreatmentId, cascadeDelete: true)
                 .Index(t => t.TreatmentId);
             
+            CreateTable(
+                "dbo.QueryTypes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Description = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Turns",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Fecha = c.DateTime(nullable: false),
+                        Hora = c.DateTime(nullable: false),
+                        TreatmentId = c.Int(nullable: false),
+                        ProfessionalTimelineId = c.Int(nullable: false),
+                        QueryTypeId = c.Int(nullable: false),
+                        AssistanceTypeId = c.Int(nullable: false),
+                        PatientId = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AssistanceTypes", t => t.AssistanceTypeId, cascadeDelete: true)
+                .ForeignKey("dbo.Patients", t => t.PatientId)
+                .ForeignKey("dbo.ProfessionalTimelines", t => t.ProfessionalTimelineId, cascadeDelete: true)
+                .ForeignKey("dbo.QueryTypes", t => t.QueryTypeId, cascadeDelete: true)
+                .ForeignKey("dbo.Treatments", t => t.TreatmentId, cascadeDelete: true)
+                .Index(t => t.TreatmentId)
+                .Index(t => t.ProfessionalTimelineId)
+                .Index(t => t.QueryTypeId)
+                .Index(t => t.AssistanceTypeId)
+                .Index(t => t.PatientId);
+            
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Turns", "TreatmentId", "dbo.Treatments");
+            DropForeignKey("dbo.Turns", "QueryTypeId", "dbo.QueryTypes");
+            DropForeignKey("dbo.Turns", "ProfessionalTimelineId", "dbo.ProfessionalTimelines");
+            DropForeignKey("dbo.Turns", "PatientId", "dbo.Patients");
+            DropForeignKey("dbo.Turns", "AssistanceTypeId", "dbo.AssistanceTypes");
             DropForeignKey("dbo.PriceLists", "TreatmentId", "dbo.Treatments");
             DropForeignKey("dbo.PreviousAntecedents", "PatientId", "dbo.Patients");
             DropForeignKey("dbo.PreviousAntecedents", "BackgroundTypeId", "dbo.BackgroundTypes");
@@ -316,17 +312,9 @@ namespace PFDC.LolaAppWeb.Migrations
             DropForeignKey("dbo.Crms", "MediaTypeId", "dbo.MediaTypes");
             DropForeignKey("dbo.Crms", "ConsultantTypeId", "dbo.ConsultantTypes");
             DropForeignKey("dbo.ClinicHistories", "SurgeryProtocolId", "dbo.SurgeryProtocols");
-            DropForeignKey("dbo.SurgeryProtocols", "UserId", "dbo.Users");
-            DropForeignKey("dbo.SurgeryProtocols", "PatientId", "dbo.Patients");
             DropForeignKey("dbo.ClinicHistories", "PatientId", "dbo.Patients");
             DropForeignKey("dbo.ClinicHistories", "FollowupTreatmentId", "dbo.FollowupTreatments");
             DropForeignKey("dbo.FollowupTreatments", "UserId", "dbo.Users");
-            DropForeignKey("dbo.FollowupTreatments", "TurnId", "dbo.Turns");
-            DropForeignKey("dbo.Turns", "TreatmentId", "dbo.Treatments");
-            DropForeignKey("dbo.Turns", "QueryTypeId", "dbo.QueryTypes");
-            DropForeignKey("dbo.Turns", "ProfessionalTimelineId", "dbo.ProfessionalTimelines");
-            DropForeignKey("dbo.Turns", "BranchId", "dbo.Branches");
-            DropForeignKey("dbo.Turns", "AssistanceTypeId", "dbo.AssistanceTypes");
             DropForeignKey("dbo.FollowupTreatments", "TreatmentId", "dbo.Treatments");
             DropForeignKey("dbo.Treatments", "StretcherId", "dbo.Stretchers");
             DropForeignKey("dbo.Treatments", "MachineId", "dbo.Machines");
@@ -335,6 +323,11 @@ namespace PFDC.LolaAppWeb.Migrations
             DropForeignKey("dbo.BodyMeasurementsHistories", "PatientId", "dbo.Patients");
             DropForeignKey("dbo.Patients", "Sex_Id", "dbo.Sexes");
             DropForeignKey("dbo.BodyMeasurementsHistories", "MeasurementsBodyTypeId", "dbo.MeasurementsBodyTypes");
+            DropIndex("dbo.Turns", new[] { "PatientId" });
+            DropIndex("dbo.Turns", new[] { "AssistanceTypeId" });
+            DropIndex("dbo.Turns", new[] { "QueryTypeId" });
+            DropIndex("dbo.Turns", new[] { "ProfessionalTimelineId" });
+            DropIndex("dbo.Turns", new[] { "TreatmentId" });
             DropIndex("dbo.PriceLists", new[] { "TreatmentId" });
             DropIndex("dbo.PreviousAntecedents", new[] { "BackgroundTypeId" });
             DropIndex("dbo.PreviousAntecedents", new[] { "PatientId" });
@@ -345,19 +338,11 @@ namespace PFDC.LolaAppWeb.Migrations
             DropIndex("dbo.Crms", new[] { "MediaTypeId" });
             DropIndex("dbo.Crms", new[] { "ConsultantTypeId" });
             DropIndex("dbo.CommentCrms", new[] { "CrmId" });
-            DropIndex("dbo.SurgeryProtocols", new[] { "UserId" });
-            DropIndex("dbo.SurgeryProtocols", new[] { "PatientId" });
-            DropIndex("dbo.Turns", new[] { "AssistanceTypeId" });
-            DropIndex("dbo.Turns", new[] { "BranchId" });
-            DropIndex("dbo.Turns", new[] { "QueryTypeId" });
-            DropIndex("dbo.Turns", new[] { "ProfessionalTimelineId" });
-            DropIndex("dbo.Turns", new[] { "TreatmentId" });
             DropIndex("dbo.Treatments", new[] { "StretcherId" });
             DropIndex("dbo.Treatments", new[] { "MachineId" });
             DropIndex("dbo.Treatments", new[] { "FrequencyId" });
             DropIndex("dbo.FollowupTreatments", new[] { "TreatmentId" });
             DropIndex("dbo.FollowupTreatments", new[] { "UserId" });
-            DropIndex("dbo.FollowupTreatments", new[] { "TurnId" });
             DropIndex("dbo.FollowupTreatments", new[] { "PatientId" });
             DropIndex("dbo.ClinicHistories", new[] { "SurgeryProtocolId" });
             DropIndex("dbo.ClinicHistories", new[] { "FollowupTreatmentId" });
@@ -365,6 +350,8 @@ namespace PFDC.LolaAppWeb.Migrations
             DropIndex("dbo.Patients", new[] { "Sex_Id" });
             DropIndex("dbo.BodyMeasurementsHistories", new[] { "MeasurementsBodyTypeId" });
             DropIndex("dbo.BodyMeasurementsHistories", new[] { "PatientId" });
+            DropTable("dbo.Turns");
+            DropTable("dbo.QueryTypes");
             DropTable("dbo.PriceLists");
             DropTable("dbo.PreviousAntecedents");
             DropTable("dbo.MediaTypes");
@@ -372,8 +359,6 @@ namespace PFDC.LolaAppWeb.Migrations
             DropTable("dbo.Crms");
             DropTable("dbo.CommentCrms");
             DropTable("dbo.SurgeryProtocols");
-            DropTable("dbo.QueryTypes");
-            DropTable("dbo.Turns");
             DropTable("dbo.Stretchers");
             DropTable("dbo.Machines");
             DropTable("dbo.Frequencies");

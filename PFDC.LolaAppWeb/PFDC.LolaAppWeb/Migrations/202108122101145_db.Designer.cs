@@ -7,13 +7,13 @@ namespace PFDC.LolaAppWeb.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class CorreccionDERybasdedatos : IMigrationMetadata
+    public sealed partial class db : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CorreccionDERybasdedatos));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(db));
         
         string IMigrationMetadata.Id
         {
-            get { return "202108100027356_Correccion DER y bas de datos"; }
+            get { return "202108122101145_db"; }
         }
         
         string IMigrationMetadata.Source

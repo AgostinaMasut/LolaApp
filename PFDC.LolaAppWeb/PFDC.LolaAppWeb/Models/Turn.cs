@@ -21,11 +21,13 @@ namespace PFDC.LolaAppWeb.Models
         [DisplayName("Tipo de consulta")]
         public int QueryTypeId { get; set; }
         public QueryType QueryType { get; set; }
-        [DisplayName("Sucursal")]
-        public int BranchId { get; set; }
-        public Branch Branch { get; set; }
+        //[DisplayName("Sucursal")]
+        //public int BranchId { get; set; }
+        //public Branch Branch { get; set; }
         [DisplayName("Asistecia")]
         public int AssistanceTypeId { get; set; }
         public AssistanceType AssistanceType { get; set; }
+        public int? PatientId { get; set; }
+        public Patient Patient { get; set; }
     }
 }
