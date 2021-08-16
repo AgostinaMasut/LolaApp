@@ -183,6 +183,10 @@
     <Compile Include="Migrations\202108122101145_db.Designer.cs">
       <DependentUpon>202108122101145_db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108162108370_5.cs" />
+    <Compile Include="Migrations\202108162108370_5.Designer.cs">
+      <DependentUpon>202108162108370_5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
     <Compile Include="Models\BackgroundType.cs" />
@@ -321,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108122101145_db.resx">
       <DependentUpon>202108122101145_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108162108370_5.resx">
+      <DependentUpon>202108162108370_5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
