@@ -71,15 +71,16 @@ namespace PFDC.LolaAppWeb.Models
         public string PasswordConfirm { get; set; }
 
         [Required()]
-        [DisplayName("Habilitar usuario")]
+        [DisplayName("Usuario habilitado")]
         public bool Enable { get; set; }
 
         [Required(ErrorMessage = "El tipo de usuario es obligatorio")]
-        [DisplayName("Tipo de usuario")]
+        
         public int UserTypeId { get; set; }
         public UserType UserType { get; set; }
 
-        [DisplayName("Sexo")]
+        //[DisplayName("Sexo")]
+        [Display(Description = "Sexo")]
         public int SexId { get; set; }
         public Sex Sex { get; set; }
     }

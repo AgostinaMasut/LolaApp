@@ -101,4 +101,5 @@ C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaApp
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csproj.CopyComplete
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.dll
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.pdb
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.error.resources
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csproj.AssemblyReference.cache

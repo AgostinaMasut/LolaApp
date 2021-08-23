@@ -18,6 +18,7 @@ namespace PFDC.LolaAppWeb.Controllers
         // GET: ProfessionalTimelines
         public ActionResult Index()
         {
+
             var professionalTimeline = db.ProfessionalTimeline.Include(p => p.Branch).Include(p => p.User);
             return View(professionalTimeline.ToList());
         }
@@ -42,6 +43,7 @@ namespace PFDC.LolaAppWeb.Controllers
         {
             ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name");
             ViewBag.UserId = new SelectList(db.Users, "Id", "Name");
+            //ViewBag.UserId = id;
             return View();
         }
 
@@ -50,17 +52,19 @@ namespace PFDC.LolaAppWeb.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Day,Input,Output,UserId,BranchId")] ProfessionalTimeline professionalTimeline)
+        public ActionResult Create([Bind(Include = "Id,Day,Input,Output,BranchId")] ProfessionalTimeline professionalTimeline)
         {
+            //professionalTimeline.UserId = userId;
             if (ModelState.IsValid)
             {
+                //professionalTimeline.UserId = id;
                 db.ProfessionalTimeline.Add(professionalTimeline);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name", professionalTimeline.BranchId);
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", professionalTimeline.UserId);
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name", professionalTimeline.UserId);
             return View(professionalTimeline);
         }
 

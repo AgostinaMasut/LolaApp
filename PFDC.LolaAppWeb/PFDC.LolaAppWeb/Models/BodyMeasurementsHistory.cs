@@ -17,7 +17,8 @@ namespace PFDC.LolaAppWeb.Models
         public  Patient Patient { get; set; }
         [DisplayName("Tipo de medida corporal")]
         public int MeasurementsBodyTypeId { get; set; }
-        public  MeasurementsBodyType MeasurementsBodyType { get; set; }
+        public MeasurementsBodyType MeasurementsBodyType { get; set; }
+
         [DisplayName("Centímetro/gramos")]
         public int CmGr { get; set; }
     }

@@ -16,8 +16,8 @@ namespace PFDC.LolaAppWeb.Models
         [DisplayName("Tratamiento")]
         public int TreatmentId { get; set; }
         public  Treatment Treatment { get; set; }
-        public int ProfessionalTimelineId { get; set; }
-        public ProfessionalTimeline ProfessionalTimeline { get; set; }
+        //public int ProfessionalTimelineId { get; set; }
+        //public ProfessionalTimeline ProfessionalTimeline { get; set; }
         [DisplayName("Tipo de consulta")]
         public int QueryTypeId { get; set; }
         public QueryType QueryType { get; set; }
@@ -29,5 +29,7 @@ namespace PFDC.LolaAppWeb.Models
         public AssistanceType AssistanceType { get; set; }
         public int? PatientId { get; set; }
         public Patient Patient { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }
