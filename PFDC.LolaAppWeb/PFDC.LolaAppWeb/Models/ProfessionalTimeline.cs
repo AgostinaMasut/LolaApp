@@ -18,15 +18,15 @@ namespace PFDC.LolaAppWeb.Models
 
         [Required()]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:HH:mm:ss}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         [DisplayName("Hora de ingreso")]
-        public DateTime Input { get; set; }
+        public TimeSpan Input { get; set; }
 
         [Required()]
         [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:HH:mm:ss}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         [DisplayName("Hora de salida")]
-        public DateTime Output { get; set; }
+        public TimeSpan Output { get; set; }
         
         [Required()]
         public int UserId { get; set; }
