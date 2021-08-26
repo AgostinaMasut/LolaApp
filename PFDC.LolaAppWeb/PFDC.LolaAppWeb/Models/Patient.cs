@@ -21,12 +21,13 @@ namespace PFDC.LolaAppWeb.Models
         [DisplayName("Apellido")]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "El DNI es obligatorio")]
+        //[Required(ErrorMessage = "El DNI es obligatorio")]
         [RegularExpression("(^[0-9]+$)", ErrorMessage = "Solo se permiten números, sin puntos")]
         [StringLength(8, ErrorMessage = "El número es demasiado largo")]
         public string DNI { get; set; }
         public string SexId { get; set; }
         public Sex Sex { get; set; }
+
         //[DisplayName("Hitorial de medidas")]
         //public int BodyMeasurementsHistoryId { get; set; }
         //public  BodyMeasurementsHistory BodyMeasurementsHistory { get; set; }

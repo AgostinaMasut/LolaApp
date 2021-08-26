@@ -18,10 +18,41 @@ namespace PFDC.LolaAppWeb.Controllers
         // GET: ProfessionalTimelines
         public ActionResult Index()
         {
+
             var professionalTimeline = db.ProfessionalTimeline.Include(p => p.Branch).Include(p => p.User);
             return View(professionalTimeline.ToList());
         }
+        // GET: ProfessionalTimelines
+        public ActionResult Prueba(int id)
+        {
+            ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name");
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name");
+            User user = db.Users.Find(id);
+            ViewBag.UserName = user.Name;
+            ViewBag.UserLastName = user.LastName;
+            var professionalTimeline = db.ProfessionalTimeline.Include(p => p.Branch).Include(p => p.User);
+            return View(Tuple.Create<ProfessionalTimeline, IEnumerable<ProfessionalTimeline>>(new ProfessionalTimeline(), professionalTimeline.ToList()));
+        }
+        // POST: ProfessionalTimelines/Prueba
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Prueba([Bind(Include = "Id,Day,Input,Output,BranchId")] ProfessionalTimeline professionalTimeline, int id)
+        {
+            professionalTimeline.UserId = id;
+            //ViewBag.Usuario = 
+            if (ModelState.IsValid)
+            {
+                //professionalTimeline.UserId = id;
+                db.ProfessionalTimeline.Add(professionalTimeline);
+                db.SaveChanges();
+                return View();
+            }
 
+            ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name", professionalTimeline.BranchId);
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name", professionalTimeline.UserId);
+            ViewBag.UserId = id;
+            return View(professionalTimeline);
+        }
         // GET: ProfessionalTimelines/Details/5
         public ActionResult Details(int? id)
         {
@@ -38,10 +69,13 @@ namespace PFDC.LolaAppWeb.Controllers
         }
 
         // GET: ProfessionalTimelines/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
             ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name");
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name");
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name");
+            User user = db.Users.Find(id);
+            ViewBag.UserName = user.Name;
+            ViewBag.UserLastName = user.LastName;
             return View();
         }
 
@@ -50,17 +84,22 @@ namespace PFDC.LolaAppWeb.Controllers
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Day,Input,Output,UserId,BranchId")] ProfessionalTimeline professionalTimeline)
+        public ActionResult Create([Bind(Include = "Id,Day,Input,Output,BranchId")] ProfessionalTimeline professionalTimeline, int id)
         {
+            professionalTimeline.UserId = id;
+            //ViewBag.Usuario = 
             if (ModelState.IsValid)
             {
+                //professionalTimeline.UserId = id;
                 db.ProfessionalTimeline.Add(professionalTimeline);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Prueba");
+                
             }
 
             ViewBag.BranchId = new SelectList(db.Branch, "Id", "Name", professionalTimeline.BranchId);
-            ViewBag.UserId = new SelectList(db.Users, "Id", "Name", professionalTimeline.UserId);
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name", professionalTimeline.UserId);
+            ViewBag.UserIs = id;
             return View(professionalTimeline);
         }
 

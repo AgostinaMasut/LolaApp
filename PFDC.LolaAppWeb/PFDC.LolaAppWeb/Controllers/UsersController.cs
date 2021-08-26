@@ -42,7 +42,8 @@ namespace PFDC.LolaAppWeb.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Email o contraseña son incorrectos");
+                    //ModelState.AddModelError("", "Email o contraseña son incorrectos");
+                    ViewBag.ErrorMessegeLogin = "Email o contraseña son incorrectos";
                 }
             }
             return View();
@@ -59,7 +60,8 @@ namespace PFDC.LolaAppWeb.Controllers
             }
             else
             {
-                ModelState.AddModelError("", "Email o contraseña son incorrectos");
+                //ModelState.AddModelError("", "Email o contraseña son incorrectos");
+                ViewBag.ErrorMessegeLogin = "Email o contraseña son incorrectos";
                 return RedirectToAction("Login");
             }
         }

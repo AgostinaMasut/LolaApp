@@ -190,6 +190,18 @@
     <Compile Include="Migrations\202108122101145_db.Designer.cs">
       <DependentUpon>202108122101145_db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108162108370_5.cs" />
+    <Compile Include="Migrations\202108162108370_5.Designer.cs">
+      <DependentUpon>202108162108370_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108192248587_error.cs" />
+    <Compile Include="Migrations\202108192248587_error.Designer.cs">
+      <DependentUpon>202108192248587_error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108252035370_ProfessionalTimeline.cs" />
+    <Compile Include="Migrations\202108252035370_ProfessionalTimeline.Designer.cs">
+      <DependentUpon>202108252035370_ProfessionalTimeline.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
     <Compile Include="Models\BackgroundType.cs" />
@@ -305,11 +317,16 @@
     <Content Include="Views\PriceLists\Details.cshtml" />
     <Content Include="Views\PriceLists\Edit.cshtml" />
     <Content Include="Views\PriceLists\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\BodyMeasurementsHistories\Create.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Delete.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Details.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Edit.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Index.cshtml" />
+=======
+    <Content Include="Views\ProfessionalTimelines\Prueba.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\NuevoCrear.cshtml" />
+>>>>>>> 8dbbe5a23b92f142820057b97a089d4e4f2abe65
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -363,6 +380,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108122101145_db.resx">
       <DependentUpon>202108122101145_db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108162108370_5.resx">
+      <DependentUpon>202108162108370_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108192248587_error.resx">
+      <DependentUpon>202108192248587_error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108252035370_ProfessionalTimeline.resx">
+      <DependentUpon>202108252035370_ProfessionalTimeline.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

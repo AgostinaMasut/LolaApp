@@ -3,34 +3,56 @@
     ViewBag.Title = "Iniciar sesión";
     Layout = null;
 }
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    @Styles.Render("~/Content/css")
+    @*@Styles.Render("~/Content/sidebar.css")*@
+    
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+    <div class="container">
         <form>
-            <div class="form-horizontal">
-                <div class="form-group">
-                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-12">
-                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            <div class="form-horizontal row g-3">
+                <div class="container">
+                    <div class="col-md-4">
+                    </div>
+                    <img src="@Url.Content("~/Content/46493590_1933393440289812_4354736374423748608_n.jpg")" alt="img" width="155" height="75">
+                    <img src="@Url.Content("~/Content/lolahair.jpg")" alt="img" width="160" height="75">
                 </div>
+                <div class="form-group align-self-center">
+                    <div class="col-md-2"></div>
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2 form-label" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group align-self-center">
+                    <div class="col-md-2"></div>
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2 form-label" })
+                    <div class="col-md-4">
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
                 </div>
 
                 <div class="form-group">
-                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                </div>
-                </div>
-
-                <div class="form-group">
-                <div class="col-md-offset-2 col-md-12">
-                    <input type="submit" value="Login" class="btn btn-default" />
-                </div>
+                    <div class="col-md-offset-2 col-md-12">
+                        <div class="col-md-5"></div>
+                        <input type="submit" value="Login" class="btn btn-default" style="background-color: #E99497" />
+                    </div>
                 </div>
             </div>
         </form>
+    </div>
 }
+</body>
+</html>
