@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BodyMeasurementsHistoriesController.cs" />
     <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MachinesController.cs" />
@@ -304,6 +305,11 @@
     <Content Include="Views\PriceLists\Details.cshtml" />
     <Content Include="Views\PriceLists\Edit.cshtml" />
     <Content Include="Views\PriceLists\Index.cshtml" />
+    <Content Include="Views\BodyMeasurementsHistories\Create.cshtml" />
+    <Content Include="Views\BodyMeasurementsHistories\Delete.cshtml" />
+    <Content Include="Views\BodyMeasurementsHistories\Details.cshtml" />
+    <Content Include="Views\BodyMeasurementsHistories\Edit.cshtml" />
+    <Content Include="Views\BodyMeasurementsHistories\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
