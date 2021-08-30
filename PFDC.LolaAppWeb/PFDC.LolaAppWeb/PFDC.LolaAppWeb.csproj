@@ -17,7 +17,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress>false</Use64BitIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
     <IISExpressSSLPort>44354</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -201,6 +202,14 @@
     <Compile Include="Migrations\202108252035370_ProfessionalTimeline.Designer.cs">
       <DependentUpon>202108252035370_ProfessionalTimeline.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108261658253_ProfessionalTimeline1.cs" />
+    <Compile Include="Migrations\202108261658253_ProfessionalTimeline1.Designer.cs">
+      <DependentUpon>202108261658253_ProfessionalTimeline1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108261722567_ProfTime.cs" />
+    <Compile Include="Migrations\202108261722567_ProfTime.Designer.cs">
+      <DependentUpon>202108261722567_ProfTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
     <Compile Include="Models\BackgroundType.cs" />
@@ -317,7 +326,6 @@
     <Content Include="Views\PriceLists\Edit.cshtml" />
     <Content Include="Views\PriceLists\Index.cshtml" />
     <Content Include="Views\ProfessionalTimelines\Prueba.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\NuevoCrear.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -380,6 +388,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108252035370_ProfessionalTimeline.resx">
       <DependentUpon>202108252035370_ProfessionalTimeline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261658253_ProfessionalTimeline1.resx">
+      <DependentUpon>202108261658253_ProfessionalTimeline1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261722567_ProfTime.resx">
+      <DependentUpon>202108261722567_ProfTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

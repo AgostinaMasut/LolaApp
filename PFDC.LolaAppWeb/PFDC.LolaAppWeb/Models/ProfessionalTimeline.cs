@@ -9,24 +9,25 @@ namespace PFDC.LolaAppWeb.Models
 {
     public class ProfessionalTimeline
     {
-        
-        
+
+
         public int Id { get; set; }
+
         [Required()]
         [DisplayName("Día")]
         public Days Day { get; set; }
 
         [Required()]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Time)]
+        //[DisplayFormat(DataFormatString = "{0:HH:mm}")]
         [DisplayName("Hora de ingreso")]
-        public TimeSpan Input { get; set; }
+        public DateTime Input { get; set; }
 
         [Required()]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Time)]
+        //[DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         [DisplayName("Hora de salida")]
-        public TimeSpan Output { get; set; }
+        public DateTime Output { get; set; }
         
         [Required()]
         public int UserId { get; set; }
@@ -37,13 +38,8 @@ namespace PFDC.LolaAppWeb.Models
         public Branch Branch { get; set; }
     }
 
-    //List<string> Days = new List<string>()
-    //    {
-    //        "Lunes","Martes", "Miércoles", "Jueves", "Viernes", "Sábado"
-    //    };
-    //"Lunes","Martes", "Miércoles", "Jueves", "Viernes", "Sábado"
     public enum Days
     {
-        Lunes = 1, Martes = 2,  Miércoles = 3, Jueves = 4, Viernes = 5, Sábado =6
+        Lunes = 1, Martes = 2,  Miércoles = 3, Jueves = 4, Viernes = 5, Sábado = 6
     }
 }
