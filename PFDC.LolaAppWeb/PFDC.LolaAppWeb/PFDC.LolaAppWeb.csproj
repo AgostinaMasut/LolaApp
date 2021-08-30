@@ -326,19 +326,16 @@
     <Content Include="Views\PriceLists\Details.cshtml" />
     <Content Include="Views\PriceLists\Edit.cshtml" />
     <Content Include="Views\PriceLists\Index.cshtml" />
-<<<<<<< HEAD
+
     <Content Include="Views\BodyMeasurementsHistories\Create.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Delete.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Details.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Edit.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Index.cshtml" />
-=======
     <Content Include="Views\ProfessionalTimelines\Prueba.cshtml" />
-<<<<<<< HEAD
-=======
+
+
     <Content Include="Views\ProfessionalTimelines\NuevoCrear.cshtml" />
->>>>>>> 8dbbe5a23b92f142820057b97a089d4e4f2abe65
->>>>>>> 3c6174a0b24337f2066e613cc70f96e25de54443
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
