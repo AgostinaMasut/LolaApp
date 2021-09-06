@@ -211,6 +211,34 @@
     <Compile Include="Migrations\202108261722567_ProfTime.Designer.cs">
       <DependentUpon>202108261722567_ProfTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108311905584_update2.cs" />
+    <Compile Include="Migrations\202108311905584_update2.Designer.cs">
+      <DependentUpon>202108311905584_update2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108311953565_update3.cs" />
+    <Compile Include="Migrations\202108311953565_update3.Designer.cs">
+      <DependentUpon>202108311953565_update3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109011228432_update4.cs" />
+    <Compile Include="Migrations\202109011228432_update4.Designer.cs">
+      <DependentUpon>202109011228432_update4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109052127168_error1.cs" />
+    <Compile Include="Migrations\202109052127168_error1.Designer.cs">
+      <DependentUpon>202109052127168_error1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109052237178_error2.cs" />
+    <Compile Include="Migrations\202109052237178_error2.Designer.cs">
+      <DependentUpon>202109052237178_error2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109062126491_OutProfTime.cs" />
+    <Compile Include="Migrations\202109062126491_OutProfTime.Designer.cs">
+      <DependentUpon>202109062126491_OutProfTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109062129098_InProfTime.cs" />
+    <Compile Include="Migrations\202109062129098_InProfTime.Designer.cs">
+      <DependentUpon>202109062129098_InProfTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
     <Compile Include="Models\BackgroundType.cs" />
@@ -291,11 +319,6 @@
     <Content Include="Views\Shared\_Layout1.cshtml" />
     <Content Include="Views\Shared\_LayoutBase.cshtml" />
     <Content Include="Views\Shared\_LayoutOriginal.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Create.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Delete.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Details.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Edit.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Index.cshtml" />
     <Content Include="Views\Stretchers\Create.cshtml" />
     <Content Include="Views\Stretchers\Delete.cshtml" />
     <Content Include="Views\Stretchers\Details.cshtml" />
@@ -326,16 +349,19 @@
     <Content Include="Views\PriceLists\Details.cshtml" />
     <Content Include="Views\PriceLists\Edit.cshtml" />
     <Content Include="Views\PriceLists\Index.cshtml" />
-
     <Content Include="Views\BodyMeasurementsHistories\Create.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Delete.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Details.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Edit.cshtml" />
     <Content Include="Views\BodyMeasurementsHistories\Index.cshtml" />
-    <Content Include="Views\ProfessionalTimelines\Prueba.cshtml" />
-
-
-    <Content Include="Views\ProfessionalTimelines\NuevoCrear.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\Create.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\Delete.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\Details.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\Edit.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\Index.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\_PartialCreate.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\_PartialIndex.cshtml" />
+    <Content Include="Views\ProfessionalTimelines\PruebaPartials.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -404,6 +430,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108261722567_ProfTime.resx">
       <DependentUpon>202108261722567_ProfTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108311905584_update2.resx">
+      <DependentUpon>202108311905584_update2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108311953565_update3.resx">
+      <DependentUpon>202108311953565_update3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109011228432_update4.resx">
+      <DependentUpon>202109011228432_update4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109052127168_error1.resx">
+      <DependentUpon>202109052127168_error1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109052237178_error2.resx">
+      <DependentUpon>202109052237178_error2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109062126491_OutProfTime.resx">
+      <DependentUpon>202109062126491_OutProfTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109062129098_InProfTime.resx">
+      <DependentUpon>202109062129098_InProfTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

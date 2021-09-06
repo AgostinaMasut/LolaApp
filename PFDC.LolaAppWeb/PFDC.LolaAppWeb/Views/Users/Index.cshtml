@@ -60,8 +60,9 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
                 @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @*@Html.ActionLink("Agregar horario", "Create", "ProfessionalTimelines", new { id = item.Id }, null)*@
-                @Html.ActionLink("Agregar horario", "Prueba", "ProfessionalTimelines", new { id = item.Id }, null)
+                @Html.ActionLink("Agregar horario", "PruebaPartials", "ProfessionalTimelines", new { id = item.Id }, null)
+                @*@Html.ActionLink("Agregar horario", "Prueba", "ProfessionalTimelines", new { id = item.Id }, null)*@
+                @*@Html.ActionLink("Agregar horario", "Index", "ProfessionalTimelines", new { id = item.Id }, null)*@
                 @*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
             </td>
         </tr>

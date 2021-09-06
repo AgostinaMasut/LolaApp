@@ -9,8 +9,6 @@ namespace PFDC.LolaAppWeb.Models
 {
     public class ProfessionalTimeline
     {
-
-
         public int Id { get; set; }
 
         [Required()]
@@ -28,11 +26,11 @@ namespace PFDC.LolaAppWeb.Models
         //[DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         [DisplayName("Hora de salida")]
         public DateTime Output { get; set; }
-        
+
         [Required()]
         public int UserId { get; set; }
         public User User { get; set; }
-        
+
         [Required()]
         public int BranchId { get; set; }
         public Branch Branch { get; set; }
@@ -40,6 +38,6 @@ namespace PFDC.LolaAppWeb.Models
 
     public enum Days
     {
-        Lunes = 1, Martes = 2,  Miércoles = 3, Jueves = 4, Viernes = 5, Sábado = 6
+        Lunes = 1, Martes = 2, Miércoles = 3, Jueves = 4, Viernes = 5, Sábado = 6
     }
 }

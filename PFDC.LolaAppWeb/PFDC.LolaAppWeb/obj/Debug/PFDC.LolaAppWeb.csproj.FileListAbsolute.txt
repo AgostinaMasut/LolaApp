@@ -102,7 +102,13 @@ C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaApp
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.dll
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.pdb
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.error.resources
-C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csproj.AssemblyReference.cache
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.ProfessionalTimeline.resources
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.ProfessionalTimeline1.resources
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.ProfTime.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.update2.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.update3.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.update4.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.error1.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.error2.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.OutProfTime.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.InProfTime.resources

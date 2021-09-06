@@ -1,0 +1,8 @@
+﻿@model Tuple<PFDC.LolaAppWeb.Models.ProfessionalTimeline, IEnumerable<PFDC.LolaAppWeb.Models.ProfessionalTimeline>>
+@{
+    ViewBag.Title = "PruebaPartials";
+}
+
+@Html.Partial("_PartialCreate", Model.Item1)
+@Html.Partial("_PartialIndex", Model.Item2)
+

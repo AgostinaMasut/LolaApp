@@ -15,19 +15,19 @@ namespace PFDC.LolaAppWeb.Models
 
         [DisplayName("Número de sesion")]
         public int SessionNumber { get; set; }
-        public int? PatientId { get; set; }
-        public Patient Patient { get; set; }
+        //public int? PatientId { get; set; }
+        //public Patient Patient { get; set; }
         
         //public int TurnId { get; set; }
         //public Turn Turn { get; set; }
         
-        public int UserId { get; set; }
-        public User User { get; set; }
+        //public int UserId { get; set; }
+        //public User User { get; set; }
         [DisplayName("Comentario")]
         public string Commentary { get; set; }
-        [DisplayName("Tratamiento")]
-        public int TreatmentId { get; set; }
-        public  Treatment Treatment { get; set; }
+        //[DisplayName("Tratamiento")]
+        //public int TreatmentId { get; set; }
+        //public  Treatment Treatment { get; set; }
 
 
     }

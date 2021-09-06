@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PFDC.LolaAppWeb.Models.ProfessionalTimeline>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Input)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Output)
+        </th>
+        <th>
+            Sucursal
+            @*@Html.DisplayNameFor(model => model.Branch.Name)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Day)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Input)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Output)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Branch.Name)
+    </td>
+</tr>
+}
+
+</table>
+<div>
+    @Html.ActionLink("Usuarios", "Index", "Users")
+</div>
