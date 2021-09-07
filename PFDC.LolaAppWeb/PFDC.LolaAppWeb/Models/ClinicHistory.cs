@@ -13,6 +13,7 @@ namespace PFDC.LolaAppWeb.Models
         public int Id { get; set; }
         public int PatientId { get; set; }
         public  Patient Patient { get; set; }
+
         //public int UserId { get; set; }
         //public  User User { get; set; }
         [DisplayName("Comentario")]
@@ -27,12 +28,12 @@ namespace PFDC.LolaAppWeb.Models
         [DisplayName("Video")]
         public byte Video { get; set; }
 
-        [DisplayName("Seguimiento de tratamiento")]
-        public int FollowupTreatmentId { get; set; }
-        public FollowupTreatment FollowupTreatment { get; set; }
+        //[DisplayName("Seguimiento de tratamiento")]
+        //public int FollowupTreatmentId { get; set; }
+        //public FollowupTreatment FollowupTreatment { get; set; }
 
         [DisplayName("Cirugía")]
-        public int SurgeryProtocolId { get; set; }
+        public int? SurgeryProtocolId { get; set; }
         public  SurgeryProtocol SurgeryProtocol { get; set; }
 
     }

@@ -18,7 +18,8 @@ namespace PFDC.LolaAppWeb.Controllers
         // GET: Patients
         public ActionResult Index()
         {
-            return View(db.Patient.ToList());
+            var patient = db.Patient.Include(p => p.Sex);
+            return View(patient.ToList());
         }
 
         // GET: Patients/Details/5
@@ -39,6 +40,7 @@ namespace PFDC.LolaAppWeb.Controllers
         // GET: Patients/Create
         public ActionResult Create()
         {
+            ViewBag.SexId = new SelectList(db.Sex, "Id", "Description");
             return View();
         }
 
@@ -56,6 +58,7 @@ namespace PFDC.LolaAppWeb.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.SexId = new SelectList(db.Sex, "Id", "Description", patient.SexId);
             return View(patient);
         }
 
@@ -71,6 +74,7 @@ namespace PFDC.LolaAppWeb.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.SexId = new SelectList(db.Sex, "Id", "Description", patient.SexId);
             return View(patient);
         }
 
@@ -87,6 +91,7 @@ namespace PFDC.LolaAppWeb.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.SexId = new SelectList(db.Sex, "Id", "Description", patient.SexId);
             return View(patient);
         }
 

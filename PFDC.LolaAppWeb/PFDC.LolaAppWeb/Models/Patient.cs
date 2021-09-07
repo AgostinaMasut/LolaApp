@@ -25,12 +25,10 @@ namespace PFDC.LolaAppWeb.Models
         [RegularExpression("(^[0-9]+$)", ErrorMessage = "Solo se permiten números, sin puntos")]
         [StringLength(8, ErrorMessage = "El número es demasiado largo")]
         public string DNI { get; set; }
-        public string SexId { get; set; }
+
+        public int? SexId { get; set; }
         public Sex Sex { get; set; }
 
-        //[DisplayName("Hitorial de medidas")]
-        //public int BodyMeasurementsHistoryId { get; set; }
-        //public  BodyMeasurementsHistory BodyMeasurementsHistory { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [DisplayName("Fecha de Nacimiento")]

@@ -22,6 +22,38 @@ namespace PFDC.LolaAppWeb.Controllers
             return View(bodyMeasurementsHistory.ToList());
         }
 
+        // GET: BodyMeasurementsHistories
+        public ActionResult Measurements(int id)
+        {
+            ViewBag.MeasurementsBodyTypeId = new SelectList(db.MeasurementsBodyType, "Id", "Description");
+            Patient paciente = new Patient();
+            ViewBag.PatientName = paciente.Name;
+            ViewBag.PatientLastName = paciente.LastName;
+            var bodyMeasurementsHistory = db.BodyMeasurementsHistory.Include(b => b.MeasurementsBodyType).Include(b => b.Patient);
+            return View(Tuple.Create <BodyMeasurementsHistory, IEnumerable<BodyMeasurementsHistory>>(new BodyMeasurementsHistory(), bodyMeasurementsHistory.ToList().Where(p => p.PatientId == id)));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Measurements([Bind(Include = "Id,MeasurementDate,MeasurementsBodyTypeId,CmGr")] BodyMeasurementsHistory bodyMeasurementsHistory, int id)
+        {
+            var parameter = id;
+            if (ModelState.IsValid)
+            {
+                bodyMeasurementsHistory.PatientId = id;
+                db.BodyMeasurementsHistory.Add(bodyMeasurementsHistory);
+                db.SaveChanges();
+                return RedirectToAction("Measurements", new { parameter});
+            }
+
+            ViewBag.MeasurementsBodyTypeId = new SelectList(db.MeasurementsBodyType, "Id", "Description", bodyMeasurementsHistory.MeasurementsBodyTypeId);
+            //ViewBag.PatientId = new SelectList(db.Patient, "Id", "Name", bodyMeasurementsHistory.PatientId);
+            ViewBag.PatientId = id;
+            var bodyMeasurementsHistory2 = db.BodyMeasurementsHistory.Include(b => b.MeasurementsBodyType).Include(b => b.Patient);
+            ModelState.AddModelError("Los datos no son correctos", "Vuelva a completar el formulario");
+            return View(Tuple.Create<BodyMeasurementsHistory, IEnumerable<BodyMeasurementsHistory>>(new BodyMeasurementsHistory(), bodyMeasurementsHistory2.ToList().Where(p => p.PatientId == id)));
+
+        }
         // GET: BodyMeasurementsHistories/Details/5
         public ActionResult Details(int? id)
         {

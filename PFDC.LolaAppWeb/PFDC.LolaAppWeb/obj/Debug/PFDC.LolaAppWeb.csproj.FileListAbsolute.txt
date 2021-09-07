@@ -112,3 +112,10 @@ C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaApp
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.error2.resources
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.OutProfTime.resources
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.InProfTime.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.Patient.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.tratfol.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.dll
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.pdb
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.xml
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.tun.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.turn.resources
