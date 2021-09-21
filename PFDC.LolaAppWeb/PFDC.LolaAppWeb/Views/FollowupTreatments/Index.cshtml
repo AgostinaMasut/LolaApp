@@ -7,7 +7,7 @@
 <h2>Seguimiento de tratamientos @ViewBag.UserName @ViewBag.UserLastName</h2>
 
 <p>
-    @Html.ActionLink("Crear nuevo tratamiento", "Create")
+    @Html.ActionLink("Agregar nuevo tratamiento", "Create")
 </p>
 <table class="table">
     <tr>
@@ -43,10 +43,10 @@
             @Html.DisplayFor(modelItem => item.SessionNumber)
         </td>
         @*<td>
-            @Html.DisplayFor(modelItem => item.Commentary)
+            @Html.DisplayFor(modelItem => item.Commentary
         </td>*@
         <td>
-            @Html.ActionLink("Agregar sesion", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Agregar sesion", "AddSession", new { id=item.Id, nsesion = item.SessionNumber, esteticista = item.UserId, tratamiento = item.TreatmentId} ) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>

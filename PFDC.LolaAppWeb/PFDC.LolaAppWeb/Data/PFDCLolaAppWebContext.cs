@@ -41,8 +41,9 @@ namespace PFDC.LolaAppWeb.Data
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.SurgeryProtocol> SurgeryProtocol{ get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.Treatment> Treatment{ get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.Turn> Turn { get; set; }
-        public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.TurnoPrueba> TurnoPrueba { get; set; }
+        //public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.TurnoPrueba> TurnoPrueba { get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.User> Users { get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.UserType> UserTypes { get; set; }
+        public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.CalendarEvent> CalendarEvents{ get; set; }
     }
 }

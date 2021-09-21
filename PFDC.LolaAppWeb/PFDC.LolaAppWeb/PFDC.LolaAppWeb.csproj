@@ -143,7 +143,6 @@
     <Compile Include="Controllers\ProfessionalTimelinesController.cs" />
     <Compile Include="Controllers\StretchersController.cs" />
     <Compile Include="Controllers\TreatmentsController.cs" />
-    <Compile Include="Controllers\TurnoPruebaController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\PFDCLolaAppWebContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -253,17 +252,29 @@
     <Compile Include="Migrations\202109071122067_tratfol.Designer.cs">
       <DependentUpon>202109071122067_tratfol.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109071155577_tun.cs" />
-    <Compile Include="Migrations\202109071155577_tun.Designer.cs">
-      <DependentUpon>202109071155577_tun.cs</DependentUpon>
+    <Compile Include="Migrations\202109141834589_errores.cs" />
+    <Compile Include="Migrations\202109141834589_errores.Designer.cs">
+      <DependentUpon>202109141834589_errores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109071202205_turn.cs" />
-    <Compile Include="Migrations\202109071202205_turn.Designer.cs">
-      <DependentUpon>202109071202205_turn.cs</DependentUpon>
+    <Compile Include="Migrations\202109161741082_FollowTrat.cs" />
+    <Compile Include="Migrations\202109161741082_FollowTrat.Designer.cs">
+      <DependentUpon>202109161741082_FollowTrat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109071248177_turnoPrueba.cs" />
-    <Compile Include="Migrations\202109071248177_turnoPrueba.Designer.cs">
-      <DependentUpon>202109071248177_turnoPrueba.cs</DependentUpon>
+    <Compile Include="Migrations\202109161744015_FollowTrat1.cs" />
+    <Compile Include="Migrations\202109161744015_FollowTrat1.Designer.cs">
+      <DependentUpon>202109161744015_FollowTrat1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109211432444_calendar.cs" />
+    <Compile Include="Migrations\202109211432444_calendar.Designer.cs">
+      <DependentUpon>202109211432444_calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109211506020_calendar1.cs" />
+    <Compile Include="Migrations\202109211506020_calendar1.Designer.cs">
+      <DependentUpon>202109211506020_calendar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109212145562_calendar2.cs" />
+    <Compile Include="Migrations\202109212145562_calendar2.Designer.cs">
+      <DependentUpon>202109212145562_calendar2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
@@ -283,14 +294,13 @@
     <Compile Include="Models\PreviousAntecedents.cs" />
     <Compile Include="Models\PriceList.cs" />
     <Compile Include="Models\ProfessionalTimeline.cs" />
-    <Compile Include="Models\SchedulerModel.cs" />
+    <Compile Include="Models\CalendarEvent.cs" />
     <Compile Include="Models\Treatment.cs" />
     <Compile Include="Models\QueryType.cs" />
     <Compile Include="Models\Sex.cs" />
     <Compile Include="Models\Stretcher.cs" />
     <Compile Include="Models\SurgeryProtocol.cs" />
     <Compile Include="Models\Turn.cs" />
-    <Compile Include="Models\TurnoPrueba.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -615,8 +625,8 @@
     <Content Include="Views\FollowupTreatments\Edit.cshtml" />
     <Content Include="Views\FollowupTreatments\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
-    <Content Include="Views\TurnoPrueba\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAgenda.cshtml" />
+    <Content Include="Views\FollowupTreatments\AddSession.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -713,14 +723,23 @@
     <EmbeddedResource Include="Migrations\202109071122067_tratfol.resx">
       <DependentUpon>202109071122067_tratfol.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109071155577_tun.resx">
-      <DependentUpon>202109071155577_tun.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109141834589_errores.resx">
+      <DependentUpon>202109141834589_errores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109071202205_turn.resx">
-      <DependentUpon>202109071202205_turn.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109161741082_FollowTrat.resx">
+      <DependentUpon>202109161741082_FollowTrat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202109071248177_turnoPrueba.resx">
-      <DependentUpon>202109071248177_turnoPrueba.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109161744015_FollowTrat1.resx">
+      <DependentUpon>202109161744015_FollowTrat1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109211432444_calendar.resx">
+      <DependentUpon>202109211432444_calendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109211506020_calendar1.resx">
+      <DependentUpon>202109211506020_calendar1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109212145562_calendar2.resx">
+      <DependentUpon>202109212145562_calendar2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

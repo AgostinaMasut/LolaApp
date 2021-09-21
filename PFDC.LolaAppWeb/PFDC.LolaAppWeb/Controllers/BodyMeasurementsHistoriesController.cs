@@ -26,7 +26,7 @@ namespace PFDC.LolaAppWeb.Controllers
         public ActionResult Measurements(int id)
         {
             ViewBag.MeasurementsBodyTypeId = new SelectList(db.MeasurementsBodyType, "Id", "Description");
-            Patient paciente = new Patient();
+            Patient paciente = db.Patient.Find(id);
             ViewBag.PatientName = paciente.Name;
             ViewBag.PatientLastName = paciente.LastName;
             var bodyMeasurementsHistory = db.BodyMeasurementsHistory.Include(b => b.MeasurementsBodyType).Include(b => b.Patient);

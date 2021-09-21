@@ -18,12 +18,59 @@ namespace PFDC.LolaAppWeb.Controllers
         // GET: FollowupTreatments
         public ActionResult Index(int id)
         {
-            Patient paciente = new Patient();
+            Patient paciente = db.Patient.Find(id);
             ViewBag.UserName = paciente.Name;
             ViewBag.LastName = paciente.LastName;
-            var tratamiento = (from c in db.FollowupTreatments orderby c.TreatmentId descending select c.TreatmentId).First();
+            //var tratamiento = (from c in db.FollowupTreatments orderby c.TreatmentId descending select c.TreatmentId).First();
             var followupTreatments = db.FollowupTreatments.Include(f => f.Patient).Include(f => f.Treatment).Include(f => f.User);
-            return View(followupTreatments.ToList().Where(p => p.PatientId == id && p.TreatmentId == tratamiento));
+            return View(followupTreatments.ToList().Where(p => p.PatientId == id && p.TreatmentId == (from c in db.FollowupTreatments orderby c.TreatmentId descending select c.TreatmentId).First()));
+        }
+
+        // GET: FollowupTreatments
+        public ActionResult AddSession(FollowupTreatment followupTreatment, int id, int nsesion, int esteticista, int tratamiento)
+        {
+            Patient paciente = db.Patient.Find(id);
+            //ViewBag.UserName = paciente.Name;
+            //ViewBag.LastName = paciente.LastName;
+            //FollowupTreatment followupTreatment = db.FollowupTreatments.Find(id);
+            followupTreatment.PatientId = id;
+            int sesion = nsesion + 1;
+            followupTreatment.SessionNumber = sesion;
+            followupTreatment.UserId = esteticista;
+            followupTreatment.TreatmentId = tratamiento;
+            if (ModelState.IsValid)
+            {
+                db.FollowupTreatments.Add(followupTreatment);
+                db.SaveChanges();
+                return RedirectToAction("Index", new { id });
+            }
+            return View(followupTreatment);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddSession2([Bind(Include = "Commentary")] FollowupTreatment followupTreatment, int id, int nsesion, int esteticista, int tratamiento)
+        {
+            followupTreatment.PatientId = id;
+            int sesion = nsesion + 1;
+            followupTreatment.SessionNumber = sesion;
+            followupTreatment.UserId = esteticista;
+            followupTreatment.TreatmentId = tratamiento;
+
+            if (ModelState.IsValid)
+            {
+                db.FollowupTreatments.Add(followupTreatment);
+                db.SaveChanges();
+                return RedirectToAction("Index", new {id});
+            }
+
+            //ViewBag.PatientId = new SelectList(db.Patient, "Id", "Name", followupTreatment.PatientId);
+            //ViewBag.TreatmentId = new SelectList(db.Treatment, "Id", "Description", followupTreatment.TreatmentId);
+            //ViewBag.UserId = new SelectList(db.Users, "Id", "Name", followupTreatment.UserId);
+            ViewBag.PatientId = id;
+            ViewBag.TreatmentId = tratamiento;
+            ViewBag.UserId = esteticista;
+            return View(followupTreatment);
         }
 
         // GET: FollowupTreatments/Details/5

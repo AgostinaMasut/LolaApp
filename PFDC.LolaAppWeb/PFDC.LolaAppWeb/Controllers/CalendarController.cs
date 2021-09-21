@@ -11,97 +11,79 @@ using DHTMLX.Scheduler.Data;
 using DHTMLX.Scheduler.Controls;
 
 using PFDC.LolaAppWeb.Models;
+using PFDC.LolaAppWeb.Data;
+
 namespace PFDC.LolaAppWeb.Controllers
 {
     public class CalendarController : Controller
     {
+        private PFDCLolaAppWebContext db = new PFDCLolaAppWebContext();
         public ActionResult Index()
         {
-            //Being initialized in that way, scheduler will use CalendarController.Data as a the datasource and CalendarController.Save to process changes
+            var agenda = new AgendaView(); // initializes the view
+            agenda.TabStyle = "Material";
+            agenda.TabPosition = 5;
             var scheduler = new DHXScheduler(this);
-
-            /*
-             * It's possible to use different actions of the current controller
-             *      var scheduler = new DHXScheduler(this);     
-             *      scheduler.DataAction = "ActionName1";
-             *      scheduler.SaveAction = "ActionName2";
-             * 
-             * Or to specify full paths
-             *      var scheduler = new DHXScheduler();
-             *      scheduler.DataAction = Url.Action("Data", "Calendar");
-             *      scheduler.SaveAction = Url.Action("Save", "Calendar");
-             */
-
-            /*
-             * The default codebase folder is ~/Scripts/dhtmlxScheduler. It can be overriden:
-             *      scheduler.Codebase = Url.Content("~/customCodebaseFolder");
-             */
-            
- 
-            scheduler.InitialDate = new DateTime(2012, 09, 03);
-
+            scheduler.Views.Add(agenda);
+            scheduler.Skin = DHXScheduler.Skins.Material;
+            scheduler.InitialDate = DateTime.Now;
             scheduler.LoadData = true;
             scheduler.EnableDataprocessor = true;
+            //scheduler.Config.details_on_dblclick = false;
+            scheduler.Config.month_date = "%F %Y";
+            scheduler.Config.day_date = "%l";
+            scheduler.Config.week_date = "%l";
+            
+            scheduler.Config.first_hour = 9;
+            scheduler.Config.last_hour = 19;
+            
 
             return View(scheduler);
         }
 
         public ContentResult Data()
         {
-            var data = new SchedulerAjaxData(
-                    new List<CalendarEvent>{ 
-                        new CalendarEvent{
-                            id = 1, 
-                            text = "Sample Event", 
-                            start_date = new DateTime(2012, 09, 03, 6, 00, 00), 
-                            end_date = new DateTime(2012, 09, 03, 8, 00, 00)
-                        },
-                        new CalendarEvent{
-                            id = 2, 
-                            text = "New Event", 
-                            start_date = new DateTime(2012, 09, 05, 9, 00, 00), 
-                            end_date = new DateTime(2012, 09, 05, 12, 00, 00)
-                        },
-                        new CalendarEvent{
-                            id = 3, 
-                            text = "Multiday Event", 
-                            start_date = new DateTime(2012, 09, 03, 10, 00, 00), 
-                            end_date = new DateTime(2012, 09, 10, 12, 00, 00)
-                        }
-                    }
+            //var data = new SchedulerAjaxData();
+            //return (ContentResult)data;
+            return (new SchedulerAjaxData(
+                db.CalendarEvents.Select(e => new { e.id, e.text, e.start_date, e.end_date})
+                )
                 );
-            return (ContentResult)data;
         }
 
         public ContentResult Save(int? id, FormCollection actionValues)
         {
             var action = new DataAction(actionValues);
-            
             try
             {
                 var changedEvent = (CalendarEvent)DHXEventsHelper.Bind(typeof(CalendarEvent), actionValues);
-
-     
 
                 switch (action.Type)
                 {
                     case DataActionTypes.Insert:
                         //do insert
                         //action.TargetId = changedEvent.id;//assign postoperational id
+                        //entities.Events.Add(changedEvent);
+                        db.CalendarEvents.Add(changedEvent);
                         break;
                     case DataActionTypes.Delete:
-                        //do delete
+                        changedEvent = db.CalendarEvents.FirstOrDefault(ev => ev.id == action.SourceId);
+                        db.CalendarEvents.Remove(changedEvent);
                         break;
                     default:// "update"                          
                         //do update
+                        var target = db.CalendarEvents.Single(e => e.id == changedEvent.id);
+                        DHXEventsHelper.Update(target, changedEvent, new List<string> { "id" });
                         break;
                 }
+                db.SaveChanges();
+                action.TargetId = changedEvent.id;
             }
             catch
             {
                 action.Type = DataActionTypes.Error;
             }
-            return (ContentResult)new AjaxSaveResponse(action);
+            return new AjaxSaveResponse(action);
         }
     }
 }

@@ -19,6 +19,11 @@ namespace PFDC.LolaAppWeb.Models
     public enum BodyAreas
     {
         //Crear enumerable
-        Lunes = 1, Martes = 2, Miércoles = 3, Jueves = 4, Viernes = 5, Sábado = 6
+        Gluteos = 1, 
+        Muslo_Anterior = 2, 
+        Muslo_Posterior = 3,
+        Abdomen = 4,
+        Flancos = 5,
+        Brazos = 6
     }
 }

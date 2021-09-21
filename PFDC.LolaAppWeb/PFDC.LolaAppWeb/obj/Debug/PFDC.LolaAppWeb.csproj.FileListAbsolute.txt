@@ -117,5 +117,10 @@ C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaApp
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.dll
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.pdb
 C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\bin\DHTMLX.xml
-C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.tun.resources
-C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.turn.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.errores.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.FollowTrat.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.FollowTrat1.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.calendar.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.calendar1.resources
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.csprojAssemblyReference.cache
+C:\Users\Agostina\Desktop\Repositorio tesis\LolaApp\PFDC.LolaAppWeb\PFDC.LolaAppWeb\obj\Debug\PFDC.LolaAppWeb.Migrations.calendar2.resources

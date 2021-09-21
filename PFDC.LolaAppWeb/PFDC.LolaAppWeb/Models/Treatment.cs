@@ -26,5 +26,6 @@ namespace PFDC.LolaAppWeb.Models
         [DisplayName("Camilla")]
         public int StretcherId { get; set; }
         public  Stretcher Stretcher { get; set; }
+        public bool Habilitado { get; set; }
     }
 }

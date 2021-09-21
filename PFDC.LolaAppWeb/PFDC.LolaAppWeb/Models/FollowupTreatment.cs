@@ -11,6 +11,8 @@ namespace PFDC.LolaAppWeb.Models
     {
         public int Id { get; set; }
 
+        public int TrackingNumber { get; set; }
+
         [Required()]
         [DisplayName("Tratamiento")]
         public int TreatmentId { get; set; }

@@ -34,17 +34,12 @@
             @*Content of sidebar*@
             <ul class="sidebar-nav">
                 <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                <li>@Html.ActionLink("Informes", "About", "Home")</li>
-                <li>@Html.ActionLink("Turnos", "Contact", "Home")</li>
-                <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
+                <li>@Html.ActionLink("Pacientes", "Index", "Patients")</li>
+                <li>@Html.ActionLink("Turnos", "Index", "Calendar")</li>
                 <li>@Html.ActionLink("Administración", "Index", "Usuarios")</li>
                 @*Agregar botón para acceder a nuevos abms*@
-                <li>@Html.ActionLink("Mis datos", "Index", "Usuarios")</li>
-                <li>
-                    <ul>@Html.ActionLink("Configuración", "Index", "Usuarios")
-                       <li>@Html.ActionLink("Mis datos", "Index", "Usuarios")</li>
-                   </ul>
-                </li>
+                <li>@Html.ActionLink("Configuración", "Index", "Usuarios")</li>
+                <li>@Html.ActionLink("Usuarios", "Index", "Users")</li>
             </ul>
         </div>
 
