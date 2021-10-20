@@ -12,7 +12,8 @@
 <table class="table">
 	<tr>
 		<th>
-			@Html.DisplayNameFor(model => model.Treatment.Description)
+			@*@Html.DisplayNameFor(model => model.Treatment.Description)*@
+			Tratamiento
 		</th>
 		<th>
 			Esteticista
@@ -24,7 +25,7 @@
 			@*@Html.DisplayNameFor(model => model.Date)*@
 		</th>
 		<th>
-			Numero de sesión
+			Número de sesión
 			@*@Html.DisplayNameFor(model => model.SessionNumber)*@
 		</th>
 		
@@ -47,11 +48,8 @@
 				@Html.DisplayFor(modelItem => item.SessionNumber)
 			</td>
 			<td>
-				@Html.DisplayFor(modelItem => item.Commentary)
-			</td>
-			<td>
 				@Html.ActionLink("Agregar sesion", "session", new { id = item.Id, nsesion = item.SessionNumber, esteticista = item.UserId, tratamiento = item.TreatmentId, paciente = item.PatientId, tnum = item.TrackingNumber }) |
-				@Html.ActionLink("Historial", "Details", new { nseg = item.TrackingNumber }) |
+				@Html.ActionLink("Historial", "historialTratamiento", new { nseg = item.TrackingNumber, tratamiento = item.TreatmentId }) |
 				@*@Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
 			</td>
 		</tr>

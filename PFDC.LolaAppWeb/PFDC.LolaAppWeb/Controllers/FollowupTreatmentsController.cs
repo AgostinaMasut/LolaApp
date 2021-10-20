@@ -97,18 +97,25 @@ namespace PFDC.LolaAppWeb.Controllers
 
         
         // GET: FollowupTreatments/Details/5
-        public ActionResult Details(int? nseg)
+        public ActionResult Details(int? id)
         {
-            if (nseg == null)
+            if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FollowupTreatment followupTreatment = db.FollowupTreatments.Find(nseg);
+            FollowupTreatment followupTreatment = db.FollowupTreatments.Find(id);
             if (followupTreatment == null)
             {
                 return HttpNotFound();
             }
             return View(followupTreatment);
+        }
+        public ActionResult historialTratamiento(int nseg, int tratamiento)
+        {
+            var followupTreatments = db.FollowupTreatments.Include(f => f.Patient).Include(f => f.Treatment).Include(f => f.User);
+            Treatment treatment = db.Treatment.Find(tratamiento);
+            ViewBag.Treatment = treatment.Description;
+            return View(followupTreatments.ToList().Where(x => x.TrackingNumber == nseg));
         }
 
         // GET: FollowupTreatments/Create

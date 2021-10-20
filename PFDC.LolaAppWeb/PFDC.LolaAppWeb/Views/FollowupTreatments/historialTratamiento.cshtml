@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PFDC.LolaAppWeb.Models.FollowupTreatment>
+
+@{
+	ViewBag.Title = "Historial de sesiones";
+}
+
+<h3>Historial de sesiones</h3>
+
+<h4>@ViewBag.Treatment</h4>
+
+<dl class="dl-horizontal">
+	@foreach (var item in Model)
+	{
+		<dt>
+			Fecha
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(modelItem => item.Date)
+		</dd>
+
+		<dt>
+			Esteticista
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(modelItem => item.User.Name)
+		</dd>
+
+		<dt>
+			Númro de sesión
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(modelItem => item.SessionNumber)
+		</dd>
+
+		<dt>
+			Observaciones
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(modelItem => item.Commentary)
+		</dd>
+		<dd>
+			<br>
+			<br>
+		</dd>
+	}
+
+</dl>

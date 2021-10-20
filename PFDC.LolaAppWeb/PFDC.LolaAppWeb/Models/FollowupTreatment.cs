@@ -27,10 +27,6 @@ namespace PFDC.LolaAppWeb.Models
         [Required()]
         public int PatientId { get; set; }
         public Patient Patient { get; set; }
-
-        //public int TurnId { get; set; }
-        //public Turn Turn { get; set; }
-
         public int UserId { get; set; }
         public User User { get; set; }
 
