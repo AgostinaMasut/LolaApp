@@ -135,6 +135,7 @@
     <Compile Include="Controllers\BodyMeasurementsHistoriesController.cs" />
     <Compile Include="Controllers\BranchesController.cs" />
     <Compile Include="Controllers\CalendarController.cs" />
+    <Compile Include="Controllers\ConfigurationController.cs" />
     <Compile Include="Controllers\FollowupTreatmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MachinesController.cs" />
@@ -275,6 +276,14 @@
     <Compile Include="Migrations\202109212145562_calendar2.cs" />
     <Compile Include="Migrations\202109212145562_calendar2.Designer.cs">
       <DependentUpon>202109212145562_calendar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109221852087_segtratamiento.cs" />
+    <Compile Include="Migrations\202109221852087_segtratamiento.Designer.cs">
+      <DependentUpon>202109221852087_segtratamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110112031598_SP.cs" />
+    <Compile Include="Migrations\202110112031598_SP.Designer.cs">
+      <DependentUpon>202110112031598_SP.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AssistanceType.cs" />
@@ -626,7 +635,12 @@
     <Content Include="Views\FollowupTreatments\Index.cshtml" />
     <Content Include="Views\Calendar\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAgenda.cshtml" />
-    <Content Include="Views\FollowupTreatments\AddSession.cshtml" />
+    <Content Include="Views\FollowupTreatments\session.cshtml" />
+    <Content Include="Views\Configuration\Index.cshtml" />
+    <Content Include="Views\Configuration\_PartialStretchers.cshtml" />
+    <Content Include="Views\Configuration\_PartialMachine.cshtml" />
+    <Content Include="Views\Configuration\_PartialTreatments.cshtml" />
+    <Content Include="Views\Configuration\_PartialBranch.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -740,6 +754,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202109212145562_calendar2.resx">
       <DependentUpon>202109212145562_calendar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109221852087_segtratamiento.resx">
+      <DependentUpon>202109221852087_segtratamiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110112031598_SP.resx">
+      <DependentUpon>202110112031598_SP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -13,6 +13,8 @@ namespace PFDC.LolaAppWeb.Models
 
         public int TrackingNumber { get; set; }
 
+        public DateTime Date { get; set; }
+
         [Required()]
         [DisplayName("Tratamiento")]
         public int TreatmentId { get; set; }

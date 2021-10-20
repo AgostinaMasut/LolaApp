@@ -45,5 +45,6 @@ namespace PFDC.LolaAppWeb.Data
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.User> Users { get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.UserType> UserTypes { get; set; }
         public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models.CalendarEvent> CalendarEvents{ get; set; }
+        //public System.Data.Entity.DbSet<PFDC.LolaAppWeb.Models>
     }
 }

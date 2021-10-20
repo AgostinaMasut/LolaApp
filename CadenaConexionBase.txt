@@ -1,0 +1,12 @@
+workstation id=PFDCLolaAppWeb.mssql.somee.com;
+packet size=4096;
+user id=AgosMassut_SQLLogin_1;
+pwd=lmu8abycrc;
+data source=PFDCLolaAppWeb.mssql.somee.com;
+persist security info=False;
+initial catalog=PFDCLolaAppWeb
+
+
+
+Address:
+ftp://PFDCLolaAppWeb.backup.somee.com/PFDCLolaAppWeb_MSSql_Database_Backup

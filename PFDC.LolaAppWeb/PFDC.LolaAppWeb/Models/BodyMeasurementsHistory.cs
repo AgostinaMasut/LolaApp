@@ -16,8 +16,10 @@ namespace PFDC.LolaAppWeb.Models
         [DataType(DataType.Date)]
         [DisplayName("Fecha de medición")]
         public DateTime MeasurementDate { get; set; }
+
         public int PatientId { get; set; }
         public  Patient Patient { get; set; }
+
         [DisplayName("Tipo de medida corporal")]
         public int MeasurementsBodyTypeId { get; set; }
         public MeasurementsBodyType MeasurementsBodyType { get; set; }

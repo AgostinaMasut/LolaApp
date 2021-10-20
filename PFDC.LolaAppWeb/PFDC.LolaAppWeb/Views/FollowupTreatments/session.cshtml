@@ -1,0 +1,66 @@
+﻿@model PFDC.LolaAppWeb.Models.FollowupTreatment
+
+@{
+	ViewBag.Title = "Agregar sesión";
+}
+
+<h2>AddSesssion</h2>
+
+@using (Html.BeginForm())
+{
+	@Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+	<h4>FollowupTreatment</h4>
+	<hr />
+	@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+	<div class="form-group">
+		@Html.Label("Fecha", htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@*@Html.DisplayFor(model => model.Treatment.Description)*@
+			<p>@ViewBag.Fecha</p>
+		</div>
+	</div>
+	<div class="form-group">
+		@Html.LabelFor(model => model.TreatmentId, "Tratamiento", htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@*@Html.DisplayFor(model => model.Treatment.Description)*@
+			@ViewBag.Treatment
+		</div>
+	</div>
+
+	<div class="form-group">
+		@Html.LabelFor(model => model.SessionNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@*@Html.DisplayFor(model => model.SessionNumber)*@
+			@ViewBag.NSession
+		</div>
+	</div>
+
+	<div class="form-group">
+		@Html.LabelFor(model => model.UserId, "Esteticista", htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-4">
+			@*@Html.DisplayFor(model => model.User.Name)*@
+			<span class="align-middle">@ViewBag.User @ViewBag.UserLast</span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		@Html.LabelFor(model => model.Commentary, htmlAttributes: new { @class = "control-label col-md-2" })
+		<div class="col-md-10">
+			@Html.EditorFor(model => model.Commentary, new { htmlAttributes = new { @class = "form-control" } })
+			@Html.ValidationMessageFor(model => model.Commentary, "", new { @class = "text-danger" })
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-md-offset-2 col-md-10">
+			<input type="submit" value="Agregar" class="btn btn-default" />
+		</div>
+	</div>
+</div>
+}
+
+<div>
+	@Html.ActionLink("Pacientes", "Index", "Patients")
+</div>
