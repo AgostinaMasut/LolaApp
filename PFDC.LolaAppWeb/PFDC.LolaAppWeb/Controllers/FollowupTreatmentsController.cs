@@ -45,10 +45,18 @@ namespace PFDC.LolaAppWeb.Controllers
             ViewBag.UserName = paciente.Name;
             ViewBag.LastName = paciente.LastName;
             var fTreatment = db.FollowupTreatments.Include(u => u.Patient).Include(u => u.Treatment).Include(u => u.User);
-            var param = new SqlParameter("@param1", id);
-            var segTratamientos = db.Database.SqlQuery<FollowupTreatment>("dbo.UltimoRegistroTratamientos @param1", param);
+            //var param = new SqlParameter("@param1", id);
+            //var segTratamientos = db.Database.SqlQuery<FollowupTreatment>("dbo.UltimoRegistroTratamientos @param1", param);
+            //var maxId = fTreatment.Max(x => x.Id);/*.Select(x => x.Id)*///para que sea el campo Id 
+            //fTreatment.Where(x => x.PatientId == 1 && x.Id == maxId).GroupBy(x => x.TrackingNumber).LastOrDefault(); // esto lo filtra por paciente y el maxID
+            //var maxId = fTreatment.Select(x => x.Id).Max();
+            var max_Query =
+               (from tab1 in db.FollowupTreatments
+                select tab1.Id).Max();
+            var maxId = fTreatment.Max(x => x.Id);
+            fTreatment.Where(x => x.PatientId == id && x.Id == max_Query).GroupBy(x => x.TrackingNumber);
+            return View(fTreatment.ToList());
             
-            return View(segTratamientos.ToList());
         }
 
         public ActionResult session(int id, int nsesion, int esteticista, int tratamiento, int paciente, int tnum)
